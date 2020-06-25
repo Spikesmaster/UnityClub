@@ -22,19 +22,4 @@ public class DroneTravel : MonoBehaviour
         
         //agent.destination = startingPosition.position;
     }
-
-    
-    void Update()
-    {
-        
-        if (agent.remainingDistance <= agent.stoppingDistance)
-        {
-            Invoke("PayloadDrop", payloadDropTime);
-        }
-    }
-
-    void PayloadDrop()
-    {
-        agent.destination = droneSpawn.transform.position;
-    }
 }
