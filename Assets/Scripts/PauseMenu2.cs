@@ -28,6 +28,5 @@ public class PauseMenu2 : MonoBehaviour
     {
         //isPaused != isPaused;
         //PauseToggleEvent?. Invoke(isPaused);
-        pausePanel.SetActive(true);
     }
 }
