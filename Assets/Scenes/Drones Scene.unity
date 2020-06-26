@@ -890,6 +890,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707942632}
   m_CullTransparentMesh: 0
+--- !u!1 &710291683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3896349405370736497, guid: 4c84ec233b678c1489e26820d4565a69,
+    type: 3}
+  m_PrefabInstance: {fileID: 131597311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &772897243
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,10 +932,13 @@ MonoBehaviour:
   mountainDest: {fileID: 1391147745}
   mainDomeDest: {fileID: 4032778766871713812}
   rainforestDest: {fileID: 157006419}
-  smallDroneSpeed: 9
-  largeDroneSpeed: 15
+  smallDroneSpeed: 15
+  largeDroneSpeed: 9
   largePayloadController: {fileID: 4032778768222828547}
   smallPayloadController: {fileID: 1807591164606959592}
+  numberOfLargeDrones:
+  - {fileID: 4032778768222828547}
+  - {fileID: 710291683}
 --- !u!4 &772897245
 Transform:
   m_ObjectHideFlags: 0

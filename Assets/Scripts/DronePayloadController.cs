@@ -15,6 +15,7 @@ public class DronePayloadController : MonoBehaviour
     // public float payloadDropTime;
     private bool destinationWanted = false;
     public GameObject largePayloadController, smallPayloadController;
+    public GameObject [] numberOfLargeDrones;
     private bool largeDroneChosen = true;
 
     public void ResourceSelection()
