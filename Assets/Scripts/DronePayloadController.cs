@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class DronePayloadController : MonoBehaviour
 {
@@ -17,11 +16,14 @@ public class DronePayloadController : MonoBehaviour
     private bool destinationWanted = false;
     public GameObject largePayloadController;
     
-    // void Start() 
+    // void Start() // Tomorrow's Job
     // {
-    //     agent = largePayloadController.GetComponent<NavMeshAgent>();   
-    // }
-    
+    //     EventTrigger trigger = GetComponent<EventTrigger>();
+    //     EventTrigger.Entry entry = new EventTrigger.Entry();
+    //     entry.eventID = EventTriggerType.PointerDown;
+    //     entry.callback.AddListener((data) => { OnPointerDownDelegate((PointerEventData)data); });
+    //     trigger.triggers.Add(entry);
+    // }    
     void OnMouseDown()
     {
         if (destinationWanted == false)
@@ -30,14 +32,13 @@ public class DronePayloadController : MonoBehaviour
             {
                 Debug.Log("OnMouseDown");
                 droneDepotUI.SetActive(true);
-                regionName.text = "Mountain Outpost"; //the region the drone is currently at
+                regionName.text = "Slow but strong"; //Since we are now touching the drones, this doesn't make sense anymore.
             }
 
             if (gameObject.CompareTag("SmallDrone"))
             {
-                Debug.Log("OnMouseDown");
                 droneDepotUI.SetActive(true);
-                regionName.text = "Rainforest";
+                regionName.text = "Fast but weak";
             }
         }
 
@@ -58,16 +59,24 @@ public class DronePayloadController : MonoBehaviour
     //         // }
     //     }
     }
-    void Update() 
-        {
-            Debug.Log("Destination wanted: " + destinationWanted);
-            // if (agent.remainingDistance <= agent.stoppingDistance)
-            // {
-            //     destinationWanted = false;
-            // }
+    
 
-            agent = largePayloadController.GetComponent<NavMeshAgent>();
-        }
+    // public void OnPointerDownDelegate(PointerEventData data)
+    // {
+    //     Debug.Log("OnPointerDownDelegate called.");
+    // }
+
+    
+    // void Update() 
+    // {
+    //     Debug.Log("Destination wanted: " + destinationWanted);
+    //     // if (agent.remainingDistance <= agent.stoppingDistance)
+    //     // {
+    //     //     destinationWanted = false;
+    //     // }
+    //     agent = largePayloadController.GetComponent<NavMeshAgent>();
+    // }
+
     public void DestinationSelection()
     {
         droneDepotUI.SetActive(false);
@@ -80,7 +89,7 @@ public class DronePayloadController : MonoBehaviour
         if (destinationWanted == true)
             {
                 destinationUI.SetActive(false);
-                //agent = largePayloadController.GetComponent<NavMeshAgent>();
+                agent = largePayloadController.GetComponent<NavMeshAgent>();
                 agent.speed = speedOfAgent;
                 agent.destination = volcanoDest.transform.position;
                 destinationWanted = false;
@@ -92,7 +101,7 @@ public class DronePayloadController : MonoBehaviour
         if (destinationWanted == true)
             {
                 destinationUI.SetActive(false);
-                //agent = largePayloadController.GetComponent<NavMeshAgent>();
+                agent = largePayloadController.GetComponent<NavMeshAgent>();
                 agent.speed = speedOfAgent;
                 agent.destination = mountainDest.transform.position;
                 destinationWanted = false;
@@ -104,7 +113,7 @@ public class DronePayloadController : MonoBehaviour
         if (destinationWanted == true)
             {
                 destinationUI.SetActive(false);
-                //agent = largePayloadController.GetComponent<NavMeshAgent>();
+                agent = largePayloadController.GetComponent<NavMeshAgent>();
                 agent.speed = speedOfAgent;
                 agent.destination = rainforestDest.transform.position;
                 destinationWanted = false;
@@ -116,7 +125,7 @@ public class DronePayloadController : MonoBehaviour
         if (destinationWanted == true)
             {
                 destinationUI.SetActive(false);
-                //agent = largePayloadController.GetComponent<NavMeshAgent>();
+                agent = largePayloadController.GetComponent<NavMeshAgent>();
                 agent.speed = speedOfAgent;
                 agent.destination = mainDomeDest.transform.position;
                 destinationWanted = false;
