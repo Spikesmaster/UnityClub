@@ -12,17 +12,17 @@ public class DronePayloadController : MonoBehaviour
     public GameObject volcanoDest, mountainDest, mainDomeDest, rainforestDest;
     private NavMeshAgent agent;
     public float speedOfAgent;
-    public float payloadDropTime;
+    // public float payloadDropTime;
     private bool destinationWanted = false;
     public GameObject largePayloadController;
     
-    // void Start() // Tomorrow's Job
+    // void Start()
     // {
     //     EventTrigger trigger = GetComponent<EventTrigger>();
     //     EventTrigger.Entry entry = new EventTrigger.Entry();
     //     entry.eventID = EventTriggerType.PointerDown;
     //     entry.callback.AddListener((data) => { OnPointerDownDelegate((PointerEventData)data); });
-    //     trigger.triggers.Add(entry);
+    //     trigger.triggers.Add();
     // }    
     void OnMouseDown()
     {
@@ -32,7 +32,7 @@ public class DronePayloadController : MonoBehaviour
             {
                 Debug.Log("OnMouseDown");
                 droneDepotUI.SetActive(true);
-                regionName.text = "Slow but strong"; //Since we are now touching the drones, this doesn't make sense anymore.
+                regionName.text = "Slow but strong"; //Since we are now touching the drones, the area doesn't make sense anymore.
             }
 
             if (gameObject.CompareTag("SmallDrone"))
