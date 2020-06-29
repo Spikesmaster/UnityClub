@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 3896349405370736498}
   - component: {fileID: 3896349405370736499}
   - component: {fileID: 3896349405370736503}
+  - component: {fileID: 7061024418240207002}
   - component: {fileID: 3896349405370736500}
   m_Layer: 0
   m_Name: LargePayload_Controller
@@ -309,6 +310,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 38.46761, y: 51.060265, z: 40.371017}
   m_Center: {x: -12.868803, y: 107.44488, z: 9.601669}
+--- !u!114 &7061024418240207002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3896349405370736497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7ccc60784b131419b2bd30fd695b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droneDepotUI: {fileID: 0}
+  regionNameUI: {fileID: 0}
+  regionNameString: Slow but strong
+  destinationUI: {fileID: 0}
+  droneSpeed: 9
 --- !u!114 &3896349405370736500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,8 +344,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: LargeDrone
+        - m_Target: {fileID: 7061024418240207002}
+          m_MethodName: NewDroneSelected
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
