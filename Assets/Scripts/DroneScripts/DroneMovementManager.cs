@@ -14,12 +14,10 @@ public class DroneMovementManager : MonoBehaviour
     public void SetNewCurrentDrone(GameObject newDrone){
 
         currentDroneSelected = newDrone;
-
     }
-
-
     public GameObject droneDepotUI;
     public GameObject destinationUI;
+    //select resource
     public void ResourceSelection()
     {
         droneDepotUI.SetActive(false);

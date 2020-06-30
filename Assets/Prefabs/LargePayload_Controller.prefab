@@ -327,6 +327,12 @@ MonoBehaviour:
   regionNameString: Slow but strong
   destinationUI: {fileID: 0}
   droneSpeed: 9
+  destinationWanted: 0
+  isInTransit: 0
+  droneWaterPayloadSize: 40
+  droneFoodPayloadSize: 0
+  currentDestination: {fileID: 0}
+  destinationDistanceOffset: 0
 --- !u!114 &3896349405370736500
 MonoBehaviour:
   m_ObjectHideFlags: 0

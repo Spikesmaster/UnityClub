@@ -304,6 +304,11 @@ PrefabInstance:
       propertyPath: destinationDistanceOffset
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 265644354560072519, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
+        type: 3}
+      propertyPath: currentDestination
+      value: 
+      objectReference: {fileID: 4032778768671792298}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2417,6 +2422,11 @@ PrefabInstance:
       propertyPath: destinationDistanceOffset
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7061024418240207002, guid: 4c84ec233b678c1489e26820d4565a69,
+        type: 3}
+      propertyPath: currentDestination
+      value: 
+      objectReference: {fileID: 4032778768671792298}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c84ec233b678c1489e26820d4565a69, type: 3}
 --- !u!1 &1350288044
@@ -2788,10 +2798,15 @@ PrefabInstance:
       propertyPath: destinationDistanceOffset
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 265644354560072519, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
+        type: 3}
+      propertyPath: currentDestination
+      value: 
+      objectReference: {fileID: 4032778767396928823}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 35.311234
+      value: -35.997
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
@@ -2801,7 +2816,7 @@ PrefabInstance:
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -115.18855
+      value: -35.21219
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
@@ -3804,7 +3819,7 @@ PrefabInstance:
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.708237
+      value: -27.6
       objectReference: {fileID: 0}
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
@@ -3814,7 +3829,7 @@ PrefabInstance:
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -112.17636
+      value: -32.2
       objectReference: {fileID: 0}
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
@@ -3931,6 +3946,11 @@ PrefabInstance:
       propertyPath: destinationDistanceOffset
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7061024418240207002, guid: 4c84ec233b678c1489e26820d4565a69,
+        type: 3}
+      propertyPath: currentDestination
+      value: 
+      objectReference: {fileID: 4032778767396928823}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c84ec233b678c1489e26820d4565a69, type: 3}
 --- !u!1 &1960895415
@@ -4472,6 +4492,11 @@ PrefabInstance:
       propertyPath: destinationDistanceOffset
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7061024418240207002, guid: 4c84ec233b678c1489e26820d4565a69,
+        type: 3}
+      propertyPath: currentDestination
+      value: 
+      objectReference: {fileID: 4032778768614073353}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c84ec233b678c1489e26820d4565a69, type: 3}
 --- !u!1 &1807591164606959592 stripped
@@ -5008,7 +5033,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0.788
   m_OnValueChanged:
@@ -5162,7 +5187,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0.967
   m_OnValueChanged:
@@ -5717,6 +5742,7 @@ GameObject:
   - component: {fileID: 4032778767396928821}
   - component: {fileID: 4032778767396928822}
   - component: {fileID: 4032778767396928824}
+  - component: {fileID: 4032778767396928825}
   m_Layer: 0
   m_Name: Rainforest
   m_TagString: Rainforest
@@ -5752,6 +5778,24 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &4032778767396928825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4032778767396928823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5cf832a1c1fc24c8131deff3687b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterSupply: 30
+  foodSupply: 30
+  waterConsumption: 0
+  foodConsumption: 0
+  waterSlider: {fileID: 4032778768700429396}
+  foodSlider: {fileID: 4032778768943883093}
 --- !u!4 &4032778767416987691
 Transform:
   m_ObjectHideFlags: 0
@@ -5840,6 +5884,7 @@ GameObject:
   - component: {fileID: 4032778767416987701}
   - component: {fileID: 4032778767416987702}
   - component: {fileID: 4032778767416987704}
+  - component: {fileID: 4032778767416987705}
   m_Layer: 0
   m_Name: MainDome
   m_TagString: Untagged
@@ -5875,6 +5920,24 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &4032778767416987705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4032778767416987703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5cf832a1c1fc24c8131deff3687b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterSupply: 50
+  foodSupply: 50
+  waterConsumption: 0
+  foodConsumption: 0
+  waterSlider: {fileID: 4032778768896289961}
+  foodSlider: {fileID: 4032778768815302390}
 --- !u!222 &4032778767482213449
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6665,7 +6728,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0.555
   m_OnValueChanged:
@@ -8198,6 +8261,7 @@ GameObject:
   - component: {fileID: 4032778768614073359}
   - component: {fileID: 4032778768614073352}
   - component: {fileID: 4032778768614073354}
+  - component: {fileID: 4032778768614073355}
   m_Layer: 0
   m_Name: Mountains
   m_TagString: Untagged
@@ -8233,6 +8297,24 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &4032778768614073355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4032778768614073353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5cf832a1c1fc24c8131deff3687b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterSupply: 90
+  foodSupply: 30
+  waterConsumption: 0
+  foodConsumption: 0
+  waterSlider: {fileID: 4032778767064215465}
+  foodSlider: {fileID: 4032778768084295637}
 --- !u!4 &4032778768614073357
 Transform:
   m_ObjectHideFlags: 0
@@ -8398,6 +8480,7 @@ GameObject:
   - component: {fileID: 4032778768671792296}
   - component: {fileID: 4032778768671792297}
   - component: {fileID: 4032778768671792300}
+  - component: {fileID: 4032778768671792299}
   m_Layer: 0
   m_Name: Volcanic
   m_TagString: Volcanic
@@ -8405,6 +8488,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4032778768671792299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4032778768671792298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5cf832a1c1fc24c8131deff3687b90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterSupply: 30
+  foodSupply: 90
+  waterConsumption: 0
+  foodConsumption: 0
+  waterSlider: {fileID: 4032778768901512903}
+  foodSlider: {fileID: 4032778767168657461}
 --- !u!114 &4032778768671792300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8579,7 +8680,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0.975
   m_OnValueChanged:
@@ -8724,9 +8825,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.385
+  m_Value: 47.4
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9279,9 +9380,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.636
+  m_Value: 48.4
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9405,7 +9506,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0.156
   m_OnValueChanged:
@@ -9548,7 +9649,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0.148
   m_OnValueChanged:
@@ -9785,10 +9886,15 @@ PrefabInstance:
       propertyPath: destinationDistanceOffset
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 265644354560072519, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
+        type: 3}
+      propertyPath: currentDestination
+      value: 
+      objectReference: {fileID: 4032778767416987703}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.117306
+      value: 9.3
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
@@ -9798,7 +9904,7 @@ PrefabInstance:
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -49.629974
+      value: -72.1
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}

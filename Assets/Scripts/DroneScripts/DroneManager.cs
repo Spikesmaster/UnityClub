@@ -16,13 +16,16 @@ public class DroneManager : MonoBehaviour
     public bool destinationWanted = false;
     
     public bool isInTransit = false;
+
+    public float droneWaterPayloadSize, droneFoodPayloadSize;
+    public GameObject currentDestination;
+
     public void NewDroneSelected ()
     {
         if (!destinationWanted && !isInTransit) 
         {
             droneDepotUI.SetActive(true);
             regionNameUI.text = regionNameString;
-            
         }
     }
 
@@ -31,24 +34,28 @@ public class DroneManager : MonoBehaviour
         
         if (destinationWanted == true)
         {
+            //resource taken
+            currentDestination.GetComponent<ResourceManagement>().waterSupply -= droneWaterPayloadSize;
+            //
+            currentDestination = outpostDestination;
             destinationUI.SetActive(false);
             NavMeshAgent agent = transform.GetComponent<NavMeshAgent>();
             agent.speed = droneSpeed;
             agent.destination = outpostDestination.transform.position;
             agent.stoppingDistance = destinationDistanceOffset;
             isInTransit = true;
+            
+            
         }
     }
-
-    /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
-    /// </summary>
     void FixedUpdate()
     {
         if(transform.GetComponent<NavMeshAgent>().remainingDistance<=destinationDistanceOffset&&isInTransit){
             destinationWanted = false;
             isInTransit = false;
             Debug.Log("test");
+            //resource added
+            currentDestination.GetComponent<ResourceManagement>().waterSupply += droneWaterPayloadSize;
         }
     }
 

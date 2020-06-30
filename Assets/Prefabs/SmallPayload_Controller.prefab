@@ -115,6 +115,12 @@ MonoBehaviour:
   regionNameString: Fast but weak
   destinationUI: {fileID: 0}
   droneSpeed: 15
+  destinationWanted: 0
+  isInTransit: 0
+  resourceManager: {fileID: 0}
+  droneWaterPayloadSize: 10
+  droneFoodPayloadSize: 0
+  destinationDistanceOffset: 0
 --- !u!1 &5350322466629102571
 GameObject:
   m_ObjectHideFlags: 0
