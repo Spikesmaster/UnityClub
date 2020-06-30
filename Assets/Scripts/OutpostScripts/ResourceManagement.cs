@@ -19,8 +19,5 @@ public class ResourceManagement : MonoBehaviour
         Debug.Log("Food supplies: " + foodSupply);
         waterSlider.value = waterSupply;
         foodSlider.value = foodSupply;
-    }
-
-
-    
+    } 
 }

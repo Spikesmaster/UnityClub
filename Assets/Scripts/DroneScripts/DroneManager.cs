@@ -58,6 +58,4 @@ public class DroneManager : MonoBehaviour
             currentDestination.GetComponent<ResourceManagement>().waterSupply += droneWaterPayloadSize;
         }
     }
-
-
 }
