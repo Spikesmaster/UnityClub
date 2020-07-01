@@ -110,16 +110,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7ccc60784b131419b2bd30fd695b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droneDepotUI: {fileID: 0}
+  choosePayloadUI: {fileID: 0}
   regionNameUI: {fileID: 0}
-  regionNameString: Fast but weak
   destinationUI: {fileID: 0}
   droneSpeed: 15
+  foodSupply: 0
+  waterSupply: 0
   destinationWanted: 0
   isInTransit: 0
-  resourceManager: {fileID: 0}
   droneWaterPayloadSize: 10
-  droneFoodPayloadSize: 0
+  droneFoodPayloadSize: 5
+  currentDestination: {fileID: 0}
   destinationDistanceOffset: 0
 --- !u!1 &5350322466629102571
 GameObject:
