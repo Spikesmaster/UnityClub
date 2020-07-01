@@ -1104,10 +1104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choosePayloadUI: {fileID: 529014514}
   destinationUI: {fileID: 836375624}
-  droneSpeed: 0
-  droneWaterPayloadSize: 0
-  droneFoodPayloadSize: 0
-  destinationDistanceOffset: 0
   destinationWanted: 0
   isInTransit: 0
 --- !u!4 &772897245
@@ -1409,22 +1405,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 772897244}
-        m_MethodName: ResourceSelection
+        m_MethodName: WaterChosen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 772897244}
-        m_MethodName: WaterChoosen
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1706,22 +1691,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 772897244}
-        m_MethodName: ResourceSelection
+        m_MethodName: FoodChosen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 772897244}
-        m_MethodName: FoodChoosen
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -22,14 +22,14 @@ public class DroneManager : MonoBehaviour
         if (!destinationWanted && !isInTransit) // This code only works if drone is not moving and player never clicked a drone.
         {
             choosePayloadUI.SetActive(true); // When a drone is clicked: changes the choosePayloadUI to visible.
-            regionNameUI.text = "Region: " + currentDestination.ToString (); // Changes the name of the region to the region where the Drone is, when player clicks it.
+            regionNameUI.text = "Region: " + currentDestination.transform.name; // Changes the name of the region to the region where the Drone is, when player clicks it.
         }
     }
     public void SelectDroneDestination(GameObject outpostDestination) // When player clicks a Destination, the event trigger on every outpost triggers this code:
     {  
         if (destinationWanted == true) // (This variable turns into true on the DroneMovementManager Script, after player choosing a destination). If the destinationWanted is true: 
         {
-            currentDestination.GetComponent<ResourceManagement>().waterSupply -= droneWaterPayloadSize; // Takes the amount of water that the drone can carry out of the currentDestination outpost.
+            //UpdateSlider
             destinationUI.SetActive(false); // "Choose Outpost" UI goes to false.
             NavMeshAgent agent = transform.GetComponent<NavMeshAgent>(); // Activates the navigation of the drone.
             agent.speed = droneSpeed; // Looks for the speed of the drone choosen and uses it.
@@ -47,6 +47,8 @@ public class DroneManager : MonoBehaviour
             destinationWanted = false; // Variable that allows player to choose the destination goes to false, again.
             isInTransit = false; // Variable that allows drone to move, turns false and drone stops moving.
             CheckingResourcesDebug(); // Calls the method when drone reaches the destination.
+            //add resource
+            //UpdateSliders();
         }
     }
 
