@@ -311,6 +311,8 @@ MonoBehaviour:
   destinationWanted: 0
   isInTransit: 0
   currentDestination: {fileID: 0}
+  waterWasChosen: 0
+  foodWasChosen: 0
 --- !u!1 &5350322466629102571
 GameObject:
   m_ObjectHideFlags: 0
