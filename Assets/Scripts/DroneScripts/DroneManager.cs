@@ -16,6 +16,8 @@ public class DroneManager : MonoBehaviour
     public bool destinationWanted = false; // Variable that checks if player have choosen a destination already or not.    
     public bool isInTransit = false; // Variables that checks if drone is still moving or not.
     public GameObject currentDestination; // Sets the destination of the Drones.
+
+    public bool waterWasChosen;
     public void NewDroneSelected () // Method to choose the Drone clicked. This Method is called by the Event Trigger that is in every drone.
     // When the player touched the drone, the event trigger calls this line of code.
     {
@@ -29,8 +31,15 @@ public class DroneManager : MonoBehaviour
     {  
         if (destinationWanted == true) // (This variable turns into true on the DroneMovementManager Script, after player choosing a destination). If the destinationWanted is true: 
         {
-            //UpdateSlider
             destinationUI.SetActive(false); // "Choose Outpost" UI goes to false.
+            if(waterWasChosen == true)
+            {
+                currentDestination.GetComponent<ResourceManagement>().waterSupply -= droneWaterPayloadSize;
+            }
+            if(waterWasChosen == false)
+            {
+                currentDestination.GetComponent<ResourceManagement>().foodSupply -= droneFoodPayloadSize;
+            }
             NavMeshAgent agent = transform.GetComponent<NavMeshAgent>(); // Activates the navigation of the drone.
             agent.speed = droneSpeed; // Looks for the speed of the drone choosen and uses it.
             agent.destination = outpostDestination.transform.position; // Moves the drone to the outpost that was clicked.
@@ -47,11 +56,16 @@ public class DroneManager : MonoBehaviour
             destinationWanted = false; // Variable that allows player to choose the destination goes to false, again.
             isInTransit = false; // Variable that allows drone to move, turns false and drone stops moving.
             CheckingResourcesDebug(); // Calls the method when drone reaches the destination.
-            //add resource
-            //UpdateSliders();
+            if(waterWasChosen == true)
+            {
+                currentDestination.GetComponent<ResourceManagement>().waterSupply += droneWaterPayloadSize;
+            }
+            if(waterWasChosen == false)
+            {
+                currentDestination.GetComponent<ResourceManagement>().foodSupply += droneFoodPayloadSize;
+            }
         }
     }
-
     void CheckingResourcesDebug() // Debug just to check the amount of resources we have (delete in the future)
     {
         Debug.Log("Water supplies: " + currentDestination.GetComponent<ResourceManagement>().waterSupply); 

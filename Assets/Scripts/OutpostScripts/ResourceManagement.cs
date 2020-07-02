@@ -11,18 +11,12 @@ public class ResourceManagement : MonoBehaviour
     {
        UpdateValueSliders();
     }
-
     void Update() 
     {
         waterSupply -= waterConsumption * Time.deltaTime; // Takes water from the outpost (we still need to choose the time - Every minute? Two minutes?).
         foodSupply -= foodConsumption * Time.deltaTime; // Takes food from the outpost.
-
-    }
-    public void UpdateSliders() 
-    {
         UpdateValueSliders();
     }
-
     void UpdateValueSliders()
     {
         waterSlider.value = waterSupply; // Updates the value of the waterSupply on the visual slider on the UI.

@@ -8,15 +8,16 @@ public class DroneMovementManager : MonoBehaviour
     GameObject currentDroneSelected;
     public GameObject choosePayloadUI, destinationUI; // UI where player chooses the resources; UI that asks the player to choose the destination.
     
-    //public float droneSpeed, droneWaterPayloadSize, droneFoodPayloadSize, destinationDistanceOffset; // Variable for the speed of the drones, amount of water that the drone can carry,
-    //amount of food the drone can carry, distance in between the drone and the final destination.    
+    public float droneWaterPayloadSize, droneFoodPayloadSize, destinationDistanceOffset; // Variable for the amount of water that the drone can carry,
+    //and the amount of food the drone can carry.
     public bool destinationWanted = false; // Variable that checks if player have choosen a destination already or not.    
     public bool isInTransit = false; // Variables that checks if drone is still moving or not.
+
+    public bool waterWasChosen;
     public void NewDestinationSelected(GameObject outpostDestination) // When player clicks the outpost to where they want to move:
     {
         currentDroneSelected.GetComponent<DroneManager>().SelectDroneDestination(outpostDestination); // Activates the movement of the drone.
     }
-
     public void SetNewCurrentDrone(GameObject newDrone) // When player clicks a drone:
     {
         currentDroneSelected = newDrone; // Sets that to the current Drone.
@@ -24,16 +25,14 @@ public class DroneMovementManager : MonoBehaviour
     public void WaterChosen() // If water button on the PayloadUI is pressed:
     {
         chosePayloadUIDisappears();
-        //Skylar and I think this is the right place for this line. do u agree?
-        //currentDestination.GetComponent<ResourceManagement>().waterSupply -= droneWaterPayloadSize; // Water is added to the current destination of the drone.
+        waterWasChosen = true;
     }
+    
     public void FoodChosen() // If food button on the PayloadUI is pressed:
     {
         chosePayloadUIDisappears();
-        //Skylar and I think this is the right place for this line. do u agree?
-        //currentDestination.GetComponent<ResourceManagement>().foodSupply -= droneFoodPayloadSize; // Water is added to the current destination of the drone.
+        waterWasChosen = false;
     }
-
     void chosePayloadUIDisappears()
     {
         choosePayloadUI.SetActive(false); // Turn PayloadUI invisible.
