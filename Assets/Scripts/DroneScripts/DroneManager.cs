@@ -15,15 +15,20 @@ public class DroneManager : MonoBehaviour
     //amount of food the drone can carry, ??? This is the localization of the Outposts, but I don't understand how this works ???.
     public bool destinationWanted = false; // Variable that checks if player have choosen a destination already or not.    
     public bool isInTransit = false; // Variables that checks if drone is still moving or not.
-    public GameObject currentDestination; // Sets the destination of the Drones.
-    public bool waterWasChosen = false, foodWasChosen = false;
+    public GameObject currentOutpost; // Sets the destination of the Drones.
+    private GameObject droneMovementManagerGO;
+    
+    void Start() 
+    {
+        droneMovementManagerGO = GameObject.Find("DronesController");
+    }
     public void NewDroneSelected () // Method to choose the Drone clicked. This Method is called by the Event Trigger that is in every drone.
     // When the player touched the drone, the event trigger calls this line of code.
     {
         if (!destinationWanted && !isInTransit) // This code only works if drone is not moving and player never clicked a drone.
         {
             choosePayloadUI.SetActive(true); // When a drone is clicked: changes the choosePayloadUI to visible.
-            regionNameUI.text = "Region: " + currentDestination.transform.name; // Changes the name of the region to the region where the Drone is, when player clicks it.
+            regionNameUI.text = "Region: " + currentOutpost.transform.name; // Changes the name of the region to the region where the Drone is, when player clicks it.
         }
     }
     public void SelectDroneDestination(GameObject outpostDestination) // When player clicks a Destination, the event trigger on every outpost triggers this code:
@@ -31,20 +36,20 @@ public class DroneManager : MonoBehaviour
         if (destinationWanted == true) // (This variable turns into true on the DroneMovementManager Script, after player choosing a destination). If the destinationWanted is true: 
         {
             destinationUI.SetActive(false); // "Choose Outpost" UI goes to false.
-            if(waterWasChosen == true)
+            if(droneMovementManagerGO.GetComponent<DroneMovementManager>().waterWasChosen == true)
             {
-                currentDestination.GetComponent<ResourceManagement>().waterSupply -= droneWaterPayloadSize;
+                currentOutpost.GetComponent<ResourceManagement>().ConsumeWater(droneWaterPayloadSize);
             }
-            if(foodWasChosen == true)
+            if(droneMovementManagerGO.GetComponent<DroneMovementManager>().foodWasChosen == true)
             {
-                currentDestination.GetComponent<ResourceManagement>().foodSupply -= droneFoodPayloadSize;
+                currentOutpost.GetComponent<ResourceManagement>().ConsumeFood(droneFoodPayloadSize);
             }
             NavMeshAgent agent = transform.GetComponent<NavMeshAgent>(); // Activates the navigation of the drone.
             agent.speed = droneSpeed; // Looks for the speed of the drone choosen and uses it.
             agent.destination = outpostDestination.transform.position; // Moves the drone to the outpost that was clicked.
             agent.stoppingDistance = destinationDistanceOffset; // ??? This is when the drone should stop, but also no idea how this is really working ???
             isInTransit = true; // Turns the variable that checks if the drone is moving true (so player can't touch drone while this is flying).
-            currentDestination = outpostDestination; // Changes the current destination to destination of the outpost that was clicked.         
+            currentOutpost = outpostDestination; // Changes the current destination to destination of the outpost that was clicked.         
         }
     }
     void FixedUpdate() // Checking if drone reached the destination.
@@ -55,19 +60,23 @@ public class DroneManager : MonoBehaviour
             destinationWanted = false; // Variable that allows player to choose the destination goes to false, again.
             isInTransit = false; // Variable that allows drone to move, turns false and drone stops moving.
             CheckingResourcesDebug(); // Calls the method when drone reaches the destination.
-            if(waterWasChosen == true)
+            if(droneMovementManagerGO.GetComponent<DroneMovementManager>().waterWasChosen == true)
             {
-                currentDestination.GetComponent<ResourceManagement>().waterSupply += droneWaterPayloadSize;
+                //todo do the same with resource consumption
+                currentOutpost.GetComponent<ResourceManagement>().waterSupply += droneWaterPayloadSize;
+                droneMovementManagerGO.GetComponent<DroneMovementManager>().waterWasChosen = false;
             }
-            if(waterWasChosen == false)
+            if(droneMovementManagerGO.GetComponent<DroneMovementManager>().foodWasChosen == true)
             {
-                currentDestination.GetComponent<ResourceManagement>().foodSupply += droneFoodPayloadSize;
+                //todo do the same with resource consumption
+                currentOutpost.GetComponent<ResourceManagement>().foodSupply += droneFoodPayloadSize;
+                droneMovementManagerGO.GetComponent<DroneMovementManager>().foodWasChosen = false;
             }
         }
     }
     void CheckingResourcesDebug() // Debug just to check the amount of resources we have (delete in the future)
     {
-        Debug.Log("Water supplies: " + currentDestination.GetComponent<ResourceManagement>().waterSupply); 
-        Debug.Log("Food supplies: " + currentDestination.GetComponent<ResourceManagement>().foodSupply);
+        Debug.Log("Water supplies: " + currentOutpost.GetComponent<ResourceManagement>().waterSupply); 
+        Debug.Log("Food supplies: " + currentOutpost.GetComponent<ResourceManagement>().foodSupply);
     }
 }
