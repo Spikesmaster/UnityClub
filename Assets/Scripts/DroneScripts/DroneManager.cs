@@ -16,8 +16,7 @@ public class DroneManager : MonoBehaviour
     public bool destinationWanted = false; // Variable that checks if player have choosen a destination already or not.    
     public bool isInTransit = false; // Variables that checks if drone is still moving or not.
     public GameObject currentDestination; // Sets the destination of the Drones.
-
-    public bool waterWasChosen;
+    public bool waterWasChosen = false, foodWasChosen = false;
     public void NewDroneSelected () // Method to choose the Drone clicked. This Method is called by the Event Trigger that is in every drone.
     // When the player touched the drone, the event trigger calls this line of code.
     {
@@ -36,7 +35,7 @@ public class DroneManager : MonoBehaviour
             {
                 currentDestination.GetComponent<ResourceManagement>().waterSupply -= droneWaterPayloadSize;
             }
-            if(waterWasChosen == false)
+            if(foodWasChosen == true)
             {
                 currentDestination.GetComponent<ResourceManagement>().foodSupply -= droneFoodPayloadSize;
             }

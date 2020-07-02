@@ -1120,6 +1120,7 @@ MonoBehaviour:
   destinationWanted: 0
   isInTransit: 0
   waterWasChosen: 0
+  foodWasChosen: 0
 --- !u!4 &772897245
 Transform:
   m_ObjectHideFlags: 0
@@ -3185,7 +3186,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 772897244}
-        m_MethodName: ResourceSelection
+        m_MethodName: EmptyChosen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

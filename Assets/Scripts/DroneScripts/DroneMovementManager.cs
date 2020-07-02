@@ -13,7 +13,7 @@ public class DroneMovementManager : MonoBehaviour
     public bool destinationWanted = false; // Variable that checks if player have choosen a destination already or not.    
     public bool isInTransit = false; // Variables that checks if drone is still moving or not.
 
-    public bool waterWasChosen;
+    public bool waterWasChosen = false, foodWasChosen = false;
     public void NewDestinationSelected(GameObject outpostDestination) // When player clicks the outpost to where they want to move:
     {
         currentDroneSelected.GetComponent<DroneManager>().SelectDroneDestination(outpostDestination); // Activates the movement of the drone.
@@ -27,11 +27,16 @@ public class DroneMovementManager : MonoBehaviour
         chosePayloadUIDisappears();
         waterWasChosen = true;
     }
-    
     public void FoodChosen() // If food button on the PayloadUI is pressed:
     {
         chosePayloadUIDisappears();
+        foodWasChosen = true;
+    }
+    public void EmptyChosen() // If food button on the PayloadUI is pressed:
+    {
+        chosePayloadUIDisappears();
         waterWasChosen = false;
+        foodWasChosen = false;
     }
     void chosePayloadUIDisappears()
     {
