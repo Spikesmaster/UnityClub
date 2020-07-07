@@ -62,14 +62,14 @@ public class DroneManager : MonoBehaviour
             CheckingResourcesDebug(); // Calls the method when drone reaches the destination.
             if(droneMovementManagerGO.GetComponent<DroneMovementManager>().waterWasChosen == true)
             {
-                //todo do the same with resource consumption
-                currentOutpost.GetComponent<ResourceManagement>().waterSupply += droneWaterPayloadSize;
+                //to do the same with resource consumption
+                currentOutpost.GetComponent<ResourceManagement>().AddWater(droneWaterPayloadSize);
                 droneMovementManagerGO.GetComponent<DroneMovementManager>().waterWasChosen = false;
             }
             if(droneMovementManagerGO.GetComponent<DroneMovementManager>().foodWasChosen == true)
             {
-                //todo do the same with resource consumption
-                currentOutpost.GetComponent<ResourceManagement>().foodSupply += droneFoodPayloadSize;
+                //to do the same with resource consumption
+                currentOutpost.GetComponent<ResourceManagement>().AddFood(droneFoodPayloadSize);
                 droneMovementManagerGO.GetComponent<DroneMovementManager>().foodWasChosen = false;
             }
         }

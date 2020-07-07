@@ -50,4 +50,16 @@ public class ResourceManagement : MonoBehaviour
         foodSupply -= amountOfFood;
         foodSlider.value = foodSupply; // Updates the value of the foodsupply on the visual slider on the UI.
     }
+    
+    public void AddWater(float amountOfWater)
+    {
+        waterSupply += amountOfWater;
+        waterSlider.value = waterSupply; // Updates the value of the waterSupply on the visual slider on the UI.
+    }
+
+    public void AddFood(float amountOfFood)
+    {
+        foodSupply += amountOfFood;
+        foodSlider.value = foodSupply; // Updates the value of the foodSupply on the visual slider on the UI.
+    }
 }
