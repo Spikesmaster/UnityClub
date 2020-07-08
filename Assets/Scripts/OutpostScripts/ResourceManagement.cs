@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ResourceManagement : MonoBehaviour
 {
@@ -9,13 +10,32 @@ public class ResourceManagement : MonoBehaviour
     public float waterGeneration, foodGeneration;
     public float minEventTime, maxEventTime, nextEventTime;
     public Slider waterSlider, foodSlider;
+    public float maxSupplies, minSupplies;
+    public TextMeshProUGUI foodNumber, waterNumber;
     void Awake() 
     {
-        UpdateValueSliders();
+        UpdateAllUI();
         nextEventTime = Random.Range(minEventTime, maxEventTime) + Time.time;
     }
     void Update() 
     {
+        if (waterSupply >= maxSupplies)
+        {
+            waterSupply = maxSupplies;
+        }
+        if (foodSupply >= maxSupplies)
+        {
+            foodSupply = maxSupplies;
+        }
+        if (waterSupply <= minSupplies)
+        {
+            waterSupply = minSupplies;
+        }
+        if (foodSupply <= minSupplies)
+        {
+            foodSupply = minSupplies;
+        }
+
         if (Time.time > nextEventTime)
         {
             int decision = Random.Range(0,2);
@@ -30,36 +50,51 @@ public class ResourceManagement : MonoBehaviour
                 waterSupply += waterGeneration;
                 foodSupply += foodGeneration;
             }
-            UpdateValueSliders();
+            UpdateAllUI();
             nextEventTime = Random.Range(minEventTime, maxEventTime) + Time.time;
         }
+
     }
-    void UpdateValueSliders()
+    void UpdateAllUI()
     {
         waterSlider.value = waterSupply; // Updates the value of the waterSupply on the visual slider on the UI.
         foodSlider.value = foodSupply; // Updates the value of the foodSupply on the visual slider on the UI.
+        waterNumber.text = waterSupply.ToString("00");
+        foodNumber.text = foodSupply.ToString("00");
     }
 
     public void ConsumeWater(float amountOfWater)
     {
         waterSupply -= amountOfWater;
-        waterSlider.value = waterSupply; // Updates the value of the waterSupply on the visual slider on the UI.
+        UpdateWaterUI();  
     }
     public void ConsumeFood(float amountOfFood)
     {
         foodSupply -= amountOfFood;
-        foodSlider.value = foodSupply; // Updates the value of the foodsupply on the visual slider on the UI.
+        UpdateFoodUI();
     }
     
     public void AddWater(float amountOfWater)
     {
         waterSupply += amountOfWater;
-        waterSlider.value = waterSupply; // Updates the value of the waterSupply on the visual slider on the UI.
+        UpdateWaterUI();
     }
 
     public void AddFood(float amountOfFood)
     {
         foodSupply += amountOfFood;
+        UpdateFoodUI();
+    }
+
+    void UpdateWaterUI()
+    {
+        waterSlider.value = waterSupply; // Updates the value of the waterSupply on the visual slider on the UI.
+        waterNumber.text = waterSupply.ToString("00");
+    }
+
+    void UpdateFoodUI()
+    {
         foodSlider.value = foodSupply; // Updates the value of the foodSupply on the visual slider on the UI.
+        foodNumber.text = foodSupply.ToString("00");
     }
 }
