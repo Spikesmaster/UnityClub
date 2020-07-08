@@ -14,6 +14,7 @@ public class DroneMovementManager : MonoBehaviour
     public bool isInTransit = false; // Variables that checks if drone is still moving or not.
 
     public bool waterWasChosen = false, foodWasChosen = false;
+   
     public void NewDestinationSelected(GameObject outpostDestination) // When player clicks the outpost to where they want to move:
     {
         currentDroneSelected.GetComponent<DroneManager>().SelectDroneDestination(outpostDestination); // Activates the movement of the drone.

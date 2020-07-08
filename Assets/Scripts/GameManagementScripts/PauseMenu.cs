@@ -1,10 +1,12 @@
 ﻿using System;
 using UnityEngine;
-public class PauseMenu2 : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
     public event Action<bool>  PauseToggleEvent;
     bool isPaused;
+
     public GameObject pausePanel;
+
     [SerializeField]
     public KeyCode pauseKey;
 
@@ -16,6 +18,7 @@ public class PauseMenu2 : MonoBehaviour
     {
         ListenForPauseInput();
     }
+
     void ListenForPauseInput()
     {
         if (Input.GetKeyDown(pauseKey))
@@ -26,7 +29,8 @@ public class PauseMenu2 : MonoBehaviour
 
     void TogglePause()
     {
-        //isPaused != isPaused;
-        //PauseToggleEvent?. Invoke(isPaused);
+        isPaused = !isPaused;
+        PauseToggleEvent?. Invoke(isPaused);
+        pausePanel.SetActive(isPaused);
     }
 }
