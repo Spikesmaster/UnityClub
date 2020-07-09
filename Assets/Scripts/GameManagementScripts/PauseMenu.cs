@@ -2,7 +2,7 @@
 using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
-    public event Action<bool>  PauseToggleEvent;
+    public static event Action<bool>  PauseToggleEvent;
     bool isPaused;
 
     public GameObject pausePanel;
