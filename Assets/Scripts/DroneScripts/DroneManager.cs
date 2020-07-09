@@ -16,12 +16,11 @@ public class DroneManager : MonoBehaviour
     public bool destinationWanted = false; // Variable that checks if player have choosen a destination already or not.    
     public bool isInTransit = false; // Variables that checks if drone is still moving or not.
     public GameObject currentOutpost; // Sets the destination of the Drones.
-    private GameObject droneMovementManagerGO;
-    public GameObject flyingDroneAudio;
+    GameObject droneMovementManagerGO;
     
-    void Wake() 
+    void Awake() 
     {
-        droneMovementManagerGO = GameObject.Find("DronesController");
+        droneMovementManagerGO = GameObject.Find("DroneUIResourcesManager");//TODO remove hardcode name here
     }
     public void NewDroneSelected () // Method to choose the Drone clicked. This Method is called by the Event Trigger that is in every drone.
     // When the player touched the drone, the event trigger calls this line of code.
@@ -49,7 +48,7 @@ public class DroneManager : MonoBehaviour
             agent.speed = droneSpeed; // Looks for the speed of the drone choosen and uses it.
             agent.destination = outpostDestination.transform.position; // Moves the drone to the outpost that was clicked.
             agent.stoppingDistance = destinationDistanceOffset; // ??? This is when the drone should stop, but also no idea how this is really working ???
-            flyingDroneAudio.GetComponent<AudioSource>().Play();
+            GetComponent<AudioSource>().Play();
             isInTransit = true; // Turns the variable that checks if the drone is moving true (so player can't touch drone while this is flying).
             currentOutpost = outpostDestination; // Changes the current destination to destination of the outpost that was clicked.         
         }
@@ -62,7 +61,7 @@ public class DroneManager : MonoBehaviour
             destinationWanted = false; // Variable that allows player to choose the destination goes to false, again.
             isInTransit = false; // Variable that allows drone to move, turns false and drone stops moving.
             CheckingResourcesDebug(); // Calls the method when drone reaches the destination.
-            flyingDroneAudio.GetComponent<AudioSource>().Stop();
+            GetComponent<AudioSource>().Stop();
             if(droneMovementManagerGO.GetComponent<DroneUIResourcesManager>().waterWasChosen == true)
             {
                 //to do the same with resource consumption

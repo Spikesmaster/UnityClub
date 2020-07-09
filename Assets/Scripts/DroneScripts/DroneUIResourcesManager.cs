@@ -45,4 +45,5 @@ public class DroneUIResourcesManager : MonoBehaviour
         destinationUI.SetActive(true); // Turn DestinationUI visible.
         currentDroneSelected.GetComponent<DroneManager>().destinationWanted = true; // Turn destinationWanted true, so player can click on the destination.
     }
+
 }
