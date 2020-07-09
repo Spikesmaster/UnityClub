@@ -53,7 +53,6 @@ public class ResourceManagement : MonoBehaviour
             UpdateAllUI();
             nextEventTime = Random.Range(minEventTime, maxEventTime) + Time.time;
         }
-
     }
     void UpdateAllUI()
     {
@@ -62,7 +61,6 @@ public class ResourceManagement : MonoBehaviour
         waterNumber.text = waterSupply.ToString("00");
         foodNumber.text = foodSupply.ToString("00");
     }
-
     public void ConsumeWater(float amountOfWater)
     {
         waterSupply -= amountOfWater;
@@ -73,7 +71,6 @@ public class ResourceManagement : MonoBehaviour
         foodSupply -= amountOfFood;
         UpdateFoodUI();
     }
-    
     public void AddWater(float amountOfWater)
     {
         waterSupply += amountOfWater;
