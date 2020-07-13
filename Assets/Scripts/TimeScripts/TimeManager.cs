@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class TimeManager : MonoBehaviour
     int nextRainDay;
     public List<GameObject> weatherOutposts = new List<GameObject>();
     public float waterAmmount;
+    public float daysObjective;
+    public TextMeshProUGUI daysLeftTMP, daysCurrentTMP, dayCycleTMP;
+    public string motherShipSceneName;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,9 @@ public class TimeManager : MonoBehaviour
         timeForNextDay = Time.time+dayDuration;
         timeForDayLightChange = Time.time+dayLightDuration;
         nextRainDay = weatherCycle;
+        daysCurrentTMP.text = "0";
+        daysLeftTMP.text = daysObjective.ToString();
+        dayCycleTMP.text = "Day";
     }
 
     // Update is called once per frame
@@ -32,11 +39,21 @@ public class TimeManager : MonoBehaviour
         if(Time.time>timeForNextDay){
             currentDay++;
             timeForNextDay = Time.time+dayDuration;
+            daysCurrentTMP.text = currentDay.ToString();
+            daysLeftTMP.text = (daysObjective-currentDay).ToString();
+            if(currentDay >= daysObjective){
+                SceneManager.LoadScene(motherShipSceneName);
+            }
         }
 
         if(Time.time>timeForDayLightChange){
             isDaylight = !isDaylight;
             timeForDayLightChange = Time.time+dayLightDuration;
+            if(isDaylight){
+                dayCycleTMP.text = "Day";
+            }else{
+                dayCycleTMP.text = "Night";
+            }
         }
 
         if(currentDay >= nextRainDay){
