@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-    public class DroneMoonResponse : MonoBehaviour
+    public class DroneMoonResponse : MoonInfluencedBase
     {
     /// Public Properties
 
@@ -22,23 +22,10 @@ using UnityEngine.EventSystems;
 
 
     ///  private Fields
-    Moon[] moons;
     float currentSpeed;
     bool canBeCaptured;
-        ///  Unity CallBacks Methods
-        void Awake()
-        {
-        moons = FindObjectsOfType<Moon>();
-        }
 
-        void OnEnable()
-        {
-        foreach (var moon in moons)
-        {
-            moon.MoonRiseEvent += MoonRiseResponse;
-            moon.MoonSetEvent += MoonSetResponse;
-        }
-        }
+        ///  Unity CallBacks Methods
 
         void Start()
         {
@@ -50,22 +37,8 @@ using UnityEngine.EventSystems;
         {
         }
 
-        void OnDisable()
-        {
-        foreach (var moon in moons)
-        {
-            moon.MoonRiseEvent -= MoonRiseResponse;
-            moon.MoonSetEvent -= MoonSetResponse;
-        }
-    }
-
-
         ///  Public Methods
-
-
-
-        ///  Private Methods
-        void MoonRiseResponse(MoonTypes moonType)
+       public override void MoonRiseResponse(MoonTypes moonType)
     {
         switch (moonType)
         {
@@ -85,14 +58,14 @@ using UnityEngine.EventSystems;
         }
     }
 
-    void MoonSetResponse(MoonTypes moonType)
+    public override void MoonSetResponse(MoonTypes moonType)
     {
         //I m resetting the full state in all cases, so I don't differentiate here.
         ResetState();
     }
 
 
-
+    ///  Private Methods
 
     void ChangeSpeed(float multiplier)
     {

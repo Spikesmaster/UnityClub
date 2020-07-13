@@ -12,7 +12,7 @@ public enum MoonTypes
     pinkMoon
 }
 
-    public class Moon : MonoBehaviour
+    public class Moon : Planet
     {
 
 
@@ -30,31 +30,6 @@ public enum MoonTypes
     GameObject moonSetCollisionZone;
 
 #pragma warning restore 0649
-
-
-    ///  private Fields
-
-
-    ///  Unity CallBacks Methods
-    void Awake()
-        {
-        }
-
-        void OnEnable()
-        {
-        }
-
-        void Start()
-        {
-        }
-
-        void Update()
-        {
-        }
-
-        void OnDisable()
-        {
-        }
 
 
     ///  Public Methods

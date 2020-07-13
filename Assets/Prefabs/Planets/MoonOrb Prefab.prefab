@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3505098716817461673}
   m_Layer: 0
-  m_Name: Moon Prefab
+  m_Name: MoonOrb Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -291,6 +291,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda2be954d0e4964c88436eca19d10d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  centerOfOrbit: {fileID: 9216852490623075269}
+  period: 10
+  startingPhase: 90
   moonType: 0
   moonRiseCollisionZone: {fileID: 5713652912977341116}
   moonSetCollisionZone: {fileID: 5713652913374905274}
@@ -386,7 +389,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f372c9e4fae59b944a2c1dae45ec09c3, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 365789579357498158, guid: bcb38c2843bc3b5459c8f0260d9ba8c7, type: 3}
+    - {fileID: 2665504168372611132, guid: bcb38c2843bc3b5459c8f0260d9ba8c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bcb38c2843bc3b5459c8f0260d9ba8c7, type: 3}
 --- !u!4 &9216852490623075269 stripped
 Transform:

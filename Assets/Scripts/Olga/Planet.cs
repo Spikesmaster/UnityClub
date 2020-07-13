@@ -6,8 +6,10 @@ public class Planet : MonoBehaviour
     {
     /// Public Properties
 
-        /// Serialized Fields for Editor
+    /// Serialized Fields for Editor
 #pragma warning disable 0649
+    [SerializeField]
+    Transform centerOfOrbit;
     [SerializeField]
     float period;
     [SerializeField]
@@ -31,7 +33,7 @@ public class Planet : MonoBehaviour
 
         void Start()
         {
-        transform.Rotate((Vector3.forward * startingPhase));
+        centerOfOrbit.Rotate((Vector3.forward * startingPhase));
         }
 
         void Update()
@@ -55,7 +57,7 @@ public class Planet : MonoBehaviour
     {
         
         Vector3 rotationAxis = Vector3.forward;
-        transform.Rotate(rotationAxis, angularSpeed * Time.deltaTime);
+        centerOfOrbit.Rotate(rotationAxis, angularSpeed * Time.deltaTime);
     }
 
     void ToggleOrbit(bool tof)
