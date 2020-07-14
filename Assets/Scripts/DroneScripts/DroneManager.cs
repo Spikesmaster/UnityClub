@@ -16,6 +16,7 @@ public class DroneManager : MonoBehaviour
     public bool destinationWanted = false; // Variable that checks if player have choosen a destination already or not.    
     public bool isInTransit = false; // Variables that checks if drone is still moving or not.
     public GameObject currentOutpost; // Sets the destination of the Drones.
+    float currentPayload = 0;
     GameObject droneMovementManagerGO;
     
     void Awake() 
@@ -38,11 +39,11 @@ public class DroneManager : MonoBehaviour
             destinationUI.SetActive(false); // "Choose Outpost" UI goes to false.
             if(droneMovementManagerGO.GetComponent<DroneUIResourcesManager>().waterWasChosen == true)
             {
-                currentOutpost.GetComponent<ResourceManagement>().ConsumeWater(droneWaterPayloadSize);
+                currentPayload = currentOutpost.GetComponent<ResourceManagement>().ConsumeWater(droneWaterPayloadSize);
             }
             if(droneMovementManagerGO.GetComponent<DroneUIResourcesManager>().foodWasChosen == true)
             {
-                currentOutpost.GetComponent<ResourceManagement>().ConsumeFood(droneFoodPayloadSize);
+                currentPayload = currentOutpost.GetComponent<ResourceManagement>().ConsumeFood(droneFoodPayloadSize);
             }
             NavMeshAgent agent = transform.GetComponent<NavMeshAgent>(); // Activates the navigation of the drone.
             agent.speed = droneSpeed; // Looks for the speed of the drone choosen and uses it.
@@ -65,15 +66,16 @@ public class DroneManager : MonoBehaviour
             if(droneMovementManagerGO.GetComponent<DroneUIResourcesManager>().waterWasChosen == true)
             {
                 //to do the same with resource consumption
-                currentOutpost.GetComponent<ResourceManagement>().AddWater(droneWaterPayloadSize);
+                currentOutpost.GetComponent<ResourceManagement>().AddWater(currentPayload);
                 droneMovementManagerGO.GetComponent<DroneUIResourcesManager>().waterWasChosen = false;
             }
             if(droneMovementManagerGO.GetComponent<DroneUIResourcesManager>().foodWasChosen == true)
             {
                 //to do the same with resource consumption
-                currentOutpost.GetComponent<ResourceManagement>().AddFood(droneFoodPayloadSize);
+                currentOutpost.GetComponent<ResourceManagement>().AddFood(currentPayload);
                 droneMovementManagerGO.GetComponent<DroneUIResourcesManager>().foodWasChosen = false;
             }
+            currentPayload = 0;
         }
     }
     void CheckingResourcesDebug() // Debug just to check the amount of resources we have (delete in the future)

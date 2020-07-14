@@ -14,7 +14,8 @@ public class ResourceManagement : MonoBehaviour
     public TextMeshProUGUI foodNumber, waterNumber;
     void Awake() 
     {
-        UpdateAllUI();
+        UpdateWaterUI();
+        UpdateFoodUI();
         nextEventTime = Random.Range(minEventTime, maxEventTime) + Time.time;
     }
     void Update() 
@@ -41,57 +42,77 @@ public class ResourceManagement : MonoBehaviour
             int decision = Random.Range(0,2);
             if (decision == 0)
                 {
-                    waterSupply -= waterConsumption; // Takes water from the outpost (we still need to choose the time - Every minute? Two minutes?).
-                    foodSupply -= foodConsumption; // Takes food from the outpost.
+                    ConsumeWater(waterConsumption); // Takes water from the outpost (we still need to choose the time - Every minute? Two minutes?).
+                    ConsumeFood(foodConsumption); // Takes food from the outpost.
                 }
             else
             {
-                Debug.Log("Consume");
-                waterSupply += waterGeneration;
-                foodSupply += foodGeneration;
+                AddWater(waterGeneration);
+                AddFood(foodGeneration);
             }
-            UpdateAllUI();
+
             nextEventTime = Random.Range(minEventTime, maxEventTime) + Time.time;
         }
     }
-    void UpdateAllUI()
+
+    public float ConsumeWater(float amountOfWater)
     {
-        waterSlider.value = waterSupply; // Updates the value of the waterSupply on the visual slider on the UI.
-        foodSlider.value = foodSupply; // Updates the value of the foodSupply on the visual slider on the UI.
-        waterNumber.text = waterSupply.ToString("00");
-        foodNumber.text = foodSupply.ToString("00");
+        float waterToReturn = 0;
+        if(waterSupply<amountOfWater){
+            waterToReturn = waterSupply;
+            waterSupply = minSupplies;
+        }else{
+            waterToReturn = amountOfWater;
+            waterSupply -= amountOfWater;
+        }
+        UpdateWaterUI();
+        return waterToReturn;
     }
-    public void ConsumeWater(float amountOfWater)
+    public float ConsumeFood(float amountOfFood)
     {
-        waterSupply -= amountOfWater;
-        UpdateWaterUI();  
-    }
-    public void ConsumeFood(float amountOfFood)
-    {
-        foodSupply -= amountOfFood;
+        float foodToReturn = 0;
+        if (foodSupply < amountOfFood)
+        {
+            foodToReturn = foodSupply;
+            foodSupply = minSupplies;
+        }else{
+            foodToReturn = amountOfFood;
+            foodSupply -= amountOfFood;
+        }
         UpdateFoodUI();
+        return foodToReturn;
     }
     public void AddWater(float amountOfWater)
     {
         waterSupply += amountOfWater;
+        if (waterSupply >= maxSupplies)
+        {
+            waterSupply = maxSupplies;
+        }
         UpdateWaterUI();
     }
 
     public void AddFood(float amountOfFood)
     {
         foodSupply += amountOfFood;
+        if (foodSupply >= maxSupplies)
+        {
+            foodSupply = maxSupplies;
+        }
         UpdateFoodUI();
     }
 
     void UpdateWaterUI()
     {
         waterSlider.value = waterSupply; // Updates the value of the waterSupply on the visual slider on the UI.
-        waterNumber.text = waterSupply.ToString("00");
+        int aux = (int) waterSupply;
+        waterNumber.text = aux.ToString("00");
     }
 
     void UpdateFoodUI()
     {
         foodSlider.value = foodSupply; // Updates the value of the foodSupply on the visual slider on the UI.
-        foodNumber.text = foodSupply.ToString("00");
+        int aux = (int)foodSupply;
+        foodNumber.text = aux.ToString("00");
     }
 }

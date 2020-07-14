@@ -302,7 +302,7 @@ PrefabInstance:
     - target: {fileID: 265644354560072519, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: destinationDistanceOffset
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 265644354560072519, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
@@ -3654,7 +3654,7 @@ PrefabInstance:
     - target: {fileID: 7061024418240207002, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: destinationDistanceOffset
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7061024418240207002, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
@@ -4207,7 +4207,7 @@ PrefabInstance:
     - target: {fileID: 265644354560072519, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: destinationDistanceOffset
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 265644354560072519, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
@@ -4818,7 +4818,7 @@ PrefabInstance:
     - target: {fileID: 7061024418240207002, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: destinationDistanceOffset
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7061024418240207002, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
@@ -5946,7 +5946,7 @@ MonoBehaviour:
   - {fileID: 4032778768614073353}
   - {fileID: 4032778767396928823}
   waterAmmount: 20
-  daysObjective: 2
+  daysObjective: 15
   daysLeftTMP: {fileID: 1693235479}
   daysCurrentTMP: {fileID: 1871768582}
   dayCycleTMP: {fileID: 1466491880}
@@ -6730,7 +6730,7 @@ PrefabInstance:
     - target: {fileID: 7061024418240207002, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: destinationDistanceOffset
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7061024418240207002, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
@@ -7443,8 +7443,8 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 0
-  m_Value: 0.967
+  m_WholeNumbers: 1
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8196,10 +8196,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSupply: 50
   foodSupply: 50
-  waterConsumption: 1
-  foodConsumption: 1
-  waterGeneration: 1
-  foodGeneration: 1
+  waterConsumption: 0
+  foodConsumption: 0
+  waterGeneration: 0
+  foodGeneration: 0
   minEventTime: 0
   maxEventTime: 1
   nextEventTime: 0
@@ -10805,8 +10805,8 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 0
-  m_Value: 47.4
+  m_WholeNumbers: 1
+  m_Value: 47
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11266,8 +11266,8 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 0
-  m_Value: 48.4
+  m_WholeNumbers: 1
+  m_Value: 48
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11392,8 +11392,8 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 0
-  m_Value: 0.156
+  m_WholeNumbers: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -11639,7 +11639,7 @@ PrefabInstance:
     - target: {fileID: 265644354560072519, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: destinationDistanceOffset
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 265644354560072519, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
