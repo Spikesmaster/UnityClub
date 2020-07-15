@@ -12,6 +12,7 @@ public class ResourceManagement : MonoBehaviour
     public Slider waterSlider, foodSlider;
     public float maxSupplies, minSupplies;
     public TextMeshProUGUI foodNumber, waterNumber;
+    public GameObject warningTimer;
     void Awake() 
     {
         UpdateWaterUI();
@@ -61,6 +62,7 @@ public class ResourceManagement : MonoBehaviour
         if(waterSupply<amountOfWater){
             waterToReturn = waterSupply;
             waterSupply = minSupplies;
+            warningTimer.SetActive(true);
         }else{
             waterToReturn = amountOfWater;
             waterSupply -= amountOfWater;
@@ -75,6 +77,7 @@ public class ResourceManagement : MonoBehaviour
         {
             foodToReturn = foodSupply;
             foodSupply = minSupplies;
+            warningTimer.SetActive(true);
         }else{
             foodToReturn = amountOfFood;
             foodSupply -= amountOfFood;
@@ -89,6 +92,9 @@ public class ResourceManagement : MonoBehaviour
         {
             waterSupply = maxSupplies;
         }
+        if(waterSupply>minSupplies&&foodSupply>minSupplies){
+            warningTimer.SetActive(false);
+        }
         UpdateWaterUI();
     }
 
@@ -98,6 +104,9 @@ public class ResourceManagement : MonoBehaviour
         if (foodSupply >= maxSupplies)
         {
             foodSupply = maxSupplies;
+        }
+        if(foodSupply>minSupplies&&waterSupply>minSupplies){
+            warningTimer.SetActive(false);
         }
         UpdateFoodUI();
     }
