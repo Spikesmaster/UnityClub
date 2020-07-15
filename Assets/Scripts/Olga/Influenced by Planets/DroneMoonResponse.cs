@@ -18,16 +18,18 @@ using UnityEngine.EventSystems;
     float speedBuffMultiplier;
     [SerializeField]
     float speedDebuffMultiplier;
+
+    float currentSpeed;
+    bool canBeCaptured;
 #pragma warning restore 0649
 
 
     ///  private Fields
-    float currentSpeed;
-    bool canBeCaptured;
 
-        ///  Unity CallBacks Methods
 
-        void Start()
+    ///  Unity CallBacks Methods
+
+    void Start()
         {
         currentSpeed = baseSpeed;
         canBeCaptured = true;
