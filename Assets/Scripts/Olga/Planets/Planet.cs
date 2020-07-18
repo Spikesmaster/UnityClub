@@ -9,7 +9,7 @@ public class Planet : MonoBehaviour
     /// Serialized Fields for Editor
 #pragma warning disable 0649
     [SerializeField]
-    Transform centerOfOrbit;
+    protected Transform centerOfOrbit;
     [SerializeField]
     float period;
     [SerializeField]
@@ -20,29 +20,30 @@ public class Planet : MonoBehaviour
 
     ///  private Fields
     bool isOrbiting = true;
-
+    protected float orbitRadius;
     ///  Unity CallBacks Methods
-    void Awake()
+    public virtual void Awake()
         {
+        orbitRadius = (transform.position - centerOfOrbit.position).magnitude;
         }
 
-        void OnEnable()
+    public virtual void OnEnable()
         {
         PauseMenu.PauseToggleEvent += ToggleOrbit;
         }
 
-        void Start()
+    public virtual void Start()
         {
         centerOfOrbit.Rotate((Vector3.forward * startingPhase));
         }
 
-        void Update()
+    public virtual void Update()
         {
         if (isOrbiting)
             Orbit();
         }
 
-        void OnDisable()
+    public virtual void OnDisable()
         {
         PauseMenu.PauseToggleEvent -= ToggleOrbit;
     }
