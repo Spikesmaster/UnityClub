@@ -11,47 +11,45 @@ using UnityEngine.EventSystems;
  */
 
 
-    public class ResourceProductionFacility : MonoBehaviour
+    public class NaturalResourceArea : MonoBehaviour
     {
     /// Public Properties
-    public ResourcePool[] generatedResources;
 
-    public bool autoGenerationIsOn;
+    //should be one 
+    public NaturalResourceDeposit naturalResourceDeposit;
 
-    public void Start()
+   public void Start()
     {
     }
 
     public void Update()
     {
-        if (autoGenerationIsOn)
-        {
-            foreach (var pool in generatedResources)
-            {
-                TriggerGenerateBehaviour(pool);
-            }
-        }
-
+         if (naturalResourceDeposit.autoGenerationIsOn)
+                TriggerGenerateBehaviour(naturalResourceDeposit);
+ 
     }
+    //here add code for recycling resources
 
-    public void TriggerGenerateBehaviour(ResourcePool resourcePool)
+    public void TriggerGenerateBehaviour(NaturalResourceDeposit resourcePool)
     {
-        //set a period to trigger
+        //set a behaviour according to the rate
+
     }
 
-
+    //do the actual generation here
     void GenerateResource(ResourcePool resourcePool)
     {
         //set here the value randomly each time based on the generationRate
         float thisValue = UnityEngine.Random.Range(resourcePool.minUnitSize, resourcePool.maxUnitSize);
-
         resourcePool.AddResources(thisValue);
     }
 
     //to be called by the drones when they take resources
-    public void RemoveResource(ResourcePool resourcePool, float amount)
+    public void YieldResource(float amount)
     {
-        resourcePool.RemoveResources(amount);
+        naturalResourceDeposit.RemoveResources(amount);
     }
  
+
+
 }

@@ -121,7 +121,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &218971977
+--- !u!1 &376821640
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,51 +129,123 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 218971980}
-  - component: {fileID: 218971979}
-  - component: {fileID: 218971978}
+  - component: {fileID: 376821641}
+  - component: {fileID: 376821645}
+  - component: {fileID: 376821644}
+  - component: {fileID: 376821643}
+  - component: {fileID: 376821642}
   m_Layer: 0
-  m_Name: MoonRiseZone
+  m_Name: Outpost Sample - Mine Retrieval - many areas - fast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &218971978
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218971977}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &218971979
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218971977}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &218971980
+--- !u!4 &376821641
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218971977}
-  m_LocalRotation: {x: -0, y: 0.70932776, z: -0, w: 0.7048788}
-  m_LocalPosition: {x: -0.05826187, y: 0, z: -9.259817}
+  m_GameObject: {fileID: 376821640}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.83, y: 0.86, z: 4.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1100568276}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &376821642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376821640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb85c4d8d1ae0747866577f6029593f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outpostMinedReservoirs:
+  - naturalResourceArea: {fileID: 1471450569}
+    autoMineResources: 1
+    generationRate: 0
+    minedReservesPool:
+      resourceType: 0
+      maximumPoolSize: 0
+      currentPoolSize: 0
+      minUnitSize: 0
+      maxUnitSize: 0
+  - naturalResourceArea: {fileID: 1471450569}
+    autoMineResources: 1
+    generationRate: 0
+    minedReservesPool:
+      resourceType: 0
+      maximumPoolSize: 0
+      currentPoolSize: 0
+      minUnitSize: 0
+      maxUnitSize: 0
+--- !u!65 &376821643
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376821640}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &376821644
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376821640}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d7eea625cf8b0f44b84501077c1e16d7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &376821645
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376821640}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &416965781
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,6 +291,127 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectDestinationKeyCode: 103
   currentWorker: {fileID: 0}
+--- !u!1 &436375215
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 436375216}
+  - component: {fileID: 436375220}
+  - component: {fileID: 436375219}
+  - component: {fileID: 436375218}
+  - component: {fileID: 436375217}
+  m_Layer: 0
+  m_Name: Colony Sample2 - Smaller storage areas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &436375216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436375215}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.34, y: 0.43, z: -0.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1270099330}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &436375217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436375215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6064c7fc5aba114c96da4d04419037a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceStoragePools:
+  - resourceType: 1
+    maximumPoolSize: 30
+    currentPoolSize: 80
+    minUnitSize: 0
+    maxUnitSize: 0
+    autoConsumptionIsOn: 1
+    consumptionRate: 0
+  - resourceType: 0
+    maximumPoolSize: 30
+    currentPoolSize: 50
+    minUnitSize: 0
+    maxUnitSize: 0
+    autoConsumptionIsOn: 1
+    consumptionRate: 2
+--- !u!65 &436375218
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436375215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &436375219
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436375215}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7dbd1f5d8a20ee049a1adf16646c4727, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &436375220
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436375215}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &592436149
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +426,7 @@ GameObject:
   - component: {fileID: 592436152}
   - component: {fileID: 592436151}
   m_Layer: 0
-  m_Name: Production Sample - Food High
+  m_Name: Deposit Sample - Minerals No regen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,11 +440,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592436149}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.43, z: 2.72}
+  m_LocalPosition: {x: -2.92, y: 0.43, z: 2.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2018553251}
-  m_RootOrder: 1
+  m_Father: {fileID: 974724245}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &592436151
 MonoBehaviour:
@@ -265,15 +458,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4277fa4e2091a5142a73fa3c3ff58c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generatedResources:
-  - resourceType: 0
-    maximumPoolSize: 50
-    currentPoolSize: 0
-    consumptionRate: 0
-    generationRate: 0
+  naturalResourceDeposit:
+    resourceType: 0
+    maximumPoolSize: 100
+    currentPoolSize: 100
     minUnitSize: 0
     maxUnitSize: 0
-  autoGenerationIsOn: 1
+    autoGenerationIsOn: 0
+    generationRate: 0
 --- !u!65 &592436152
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -528,7 +720,7 @@ GameObject:
   - component: {fileID: 696817274}
   - component: {fileID: 696817273}
   m_Layer: 0
-  m_Name: Consumption Sample - Both Mixed
+  m_Name: Colony Sample - Intense Water - Low mineral
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,10 +734,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696817271}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.34, y: 0.43, z: -0.15}
+  m_LocalPosition: {x: 2.34, y: 0.43, z: -3.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2018553251}
+  m_Father: {fileID: 1270099330}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &696817273
@@ -557,25 +749,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 696817271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cb85c4d8d1ae0747866577f6029593f, type: 3}
+  m_Script: {fileID: 11500000, guid: e6064c7fc5aba114c96da4d04419037a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourcePools:
-  - resourceType: 0
-    maximumPoolSize: 100
-    currentPoolSize: 0
-    consumptionRate: 2
-    generationRate: 0
-    minUnitSize: 0
-    maxUnitSize: 0
+  resourceStoragePools:
   - resourceType: 1
     maximumPoolSize: 100
-    currentPoolSize: 0
-    consumptionRate: 0
-    generationRate: 0
+    currentPoolSize: 80
     minUnitSize: 0
     maxUnitSize: 0
-  autoConsumptionIsOn: 1
+    autoConsumptionIsOn: 1
+    consumptionRate: 0
+  - resourceType: 0
+    maximumPoolSize: 80
+    currentPoolSize: 50
+    minUnitSize: 0
+    maxUnitSize: 0
+    autoConsumptionIsOn: 1
+    consumptionRate: 2
 --- !u!65 &696817274
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -636,6 +827,408 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696817271}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &752669798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 752669799}
+  m_Layer: 0
+  m_Name: Combinations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &752669799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752669798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 954818384}
+  m_Father: {fileID: 2018553251}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &954818383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 954818384}
+  - component: {fileID: 954818389}
+  - component: {fileID: 954818388}
+  - component: {fileID: 954818387}
+  - component: {fileID: 954818386}
+  - component: {fileID: 954818385}
+  - component: {fileID: 954818390}
+  m_Layer: 0
+  m_Name: Resource Retrieval Outpost with Colony of Workers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &954818384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954818383}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.02, y: 0, z: -3.79}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 752669799}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &954818385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954818383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6064c7fc5aba114c96da4d04419037a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceStoragePools:
+  - resourceType: 0
+    maximumPoolSize: 50
+    currentPoolSize: 0
+    minUnitSize: 0
+    maxUnitSize: 0
+    autoConsumptionIsOn: 1
+    consumptionRate: 2
+  - resourceType: 1
+    maximumPoolSize: 50
+    currentPoolSize: 0
+    minUnitSize: 0
+    maxUnitSize: 0
+    autoConsumptionIsOn: 1
+    consumptionRate: 2
+--- !u!114 &954818386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954818383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb85c4d8d1ae0747866577f6029593f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outpostMinedReservoirs:
+  - naturalResourceArea: {fileID: 1471450569}
+    autoMineResources: 0
+    generationRate: 0
+    minedReservesPool:
+      resourceType: 0
+      maximumPoolSize: 100
+      currentPoolSize: 100
+      minUnitSize: 0
+      maxUnitSize: 0
+--- !u!136 &954818387
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954818383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &954818388
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954818383}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &954818389
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954818383}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &954818390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954818383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05038ac8f110c0141ae19e1a64589930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &974724244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 974724245}
+  m_Layer: 0
+  m_Name: Natural Resource Areas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &974724245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974724244}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 592436150}
+  - {fileID: 1741437550}
+  - {fileID: 1471450568}
+  m_Father: {fileID: 2018553251}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1023151439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023151440}
+  - component: {fileID: 1023151444}
+  - component: {fileID: 1023151443}
+  - component: {fileID: 1023151442}
+  - component: {fileID: 1023151441}
+  m_Layer: 0
+  m_Name: Outpost Sample - Water retrieval - 1 area - fast
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1023151440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023151439}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.83, y: 0.43, z: 2.62}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1100568276}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1023151441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023151439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb85c4d8d1ae0747866577f6029593f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outpostMinedReservoirs:
+  - naturalResourceArea: {fileID: 1471450569}
+    autoMineResources: 1
+    generationRate: 0
+    minedReservesPool:
+      resourceType: 0
+      maximumPoolSize: 0
+      currentPoolSize: 0
+      minUnitSize: 0
+      maxUnitSize: 0
+--- !u!65 &1023151442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023151439}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1023151443
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023151439}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: d7eea625cf8b0f44b84501077c1e16d7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1023151444
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023151439}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1100568275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1100568276}
+  m_Layer: 0
+  m_Name: Resource Retrieval Outposts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1100568276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1100568275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1023151440}
+  - {fileID: 376821641}
+  m_Father: {fileID: 2018553251}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1270099329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270099330}
+  m_Layer: 0
+  m_Name: Colonies with Resource Needs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1270099330
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270099329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 696817272}
+  - {fileID: 436375216}
+  m_Father: {fileID: 2018553251}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1415737076
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +1275,7 @@ GameObject:
   - component: {fileID: 1471450570}
   - component: {fileID: 1471450569}
   m_Layer: 0
-  m_Name: Production Sample - Water mid
+  m_Name: Deposit Sample - Water mid regen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -696,10 +1289,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471450567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.83, y: 0.43, z: 2.62}
+  m_LocalPosition: {x: 1.03, y: 0.43, z: 2.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2018553251}
+  m_Father: {fileID: 974724245}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1471450569
@@ -714,15 +1307,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4277fa4e2091a5142a73fa3c3ff58c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generatedResources:
-  - resourceType: 1
-    maximumPoolSize: 500
-    currentPoolSize: 0
-    consumptionRate: 0
-    generationRate: 1
+  naturalResourceDeposit:
+    resourceType: 1
+    maximumPoolSize: 200
+    currentPoolSize: 150
     minUnitSize: 0
     maxUnitSize: 0
-  autoGenerationIsOn: 1
+    autoGenerationIsOn: 1
+    generationRate: 1
 --- !u!65 &1471450570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2551,12 +3143,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1573580633}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1579554911 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3869054029314222692, guid: 95bcdc22d304da94d84190568691ae76,
-    type: 3}
-  m_PrefabInstance: {fileID: 3869054028589765107}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1617028099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,7 +3173,7 @@ Transform:
   - {fileID: 416965782}
   - {fileID: 1415737077}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1733779490
 GameObject:
@@ -2635,6 +3221,120 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1741437549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1741437550}
+  - component: {fileID: 1741437554}
+  - component: {fileID: 1741437553}
+  - component: {fileID: 1741437552}
+  - component: {fileID: 1741437551}
+  m_Layer: 0
+  m_Name: Deposit Sample - Minerals Large deposit slow regen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1741437550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741437549}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.79, y: 0.43, z: 2.72}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 974724245}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1741437551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741437549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4277fa4e2091a5142a73fa3c3ff58c8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  naturalResourceDeposit:
+    resourceType: 0
+    maximumPoolSize: 500
+    currentPoolSize: 200
+    minUnitSize: 0
+    maxUnitSize: 0
+    autoGenerationIsOn: 1
+    generationRate: 2
+--- !u!65 &1741437552
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741437549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1741437553
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741437549}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d2a5070f625a0c45adfb632e99f2633, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1741437554
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741437549}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1847428661
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,32 +3472,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1966584318 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3869054028096719668, guid: 95bcdc22d304da94d84190568691ae76,
-    type: 3}
-  m_PrefabInstance: {fileID: 3869054028589765107}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1966584320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966584318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27eb70dedafd41b49aae8efb908a407d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  centerOfOrbit: {fileID: 1579554911}
-  period: 10
-  startingPhase: 0
-  intensityMultiplier: 1
-  highestPoint: 0
-  currentAltitude: 0
-  sunZenithColor: {r: 1, g: 0.8144701, b: 0, a: 1}
-  sunSetColor: {r: 1, g: 0.49952483, b: 0, a: 1}
 --- !u!1 &1968526463
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,11 +3676,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 696817272}
-  - {fileID: 592436150}
-  - {fileID: 1471450568}
+  - {fileID: 974724245}
+  - {fileID: 1100568276}
+  - {fileID: 1270099330}
+  - {fileID: 752669799}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &368842815647193391
 Transform:
@@ -3230,14 +3905,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 340003948, guid: 95bcdc22d304da94d84190568691ae76, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.05826187
-      objectReference: {fileID: 0}
-    - target: {fileID: 340003948, guid: 95bcdc22d304da94d84190568691ae76, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 16.95
-      objectReference: {fileID: 0}
     - target: {fileID: 3869054028180714196, guid: 95bcdc22d304da94d84190568691ae76,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3298,29 +3965,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planetary Complex
       objectReference: {fileID: 0}
-    - target: {fileID: 6096786060488502235, guid: 95bcdc22d304da94d84190568691ae76,
-        type: 3}
-      propertyPath: m_Name
-      value: Moon1 - Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 9218417342001143416, guid: 95bcdc22d304da94d84190568691ae76,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.29458714
-      objectReference: {fileID: 0}
-    - target: {fileID: 9218417342001143416, guid: 95bcdc22d304da94d84190568691ae76,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.95562464
-      objectReference: {fileID: 0}
-    - target: {fileID: 9218417342001143416, guid: 95bcdc22d304da94d84190568691ae76,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 34.266003
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1504776799, guid: 95bcdc22d304da94d84190568691ae76, type: 3}
-    - {fileID: 1468149735425173879, guid: 95bcdc22d304da94d84190568691ae76, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95bcdc22d304da94d84190568691ae76, type: 3}
 --- !u!33 &3913963702975398015
 MeshFilter:
