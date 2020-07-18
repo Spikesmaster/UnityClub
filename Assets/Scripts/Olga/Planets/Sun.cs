@@ -28,6 +28,7 @@ public class Sun : Planet
         base.Start();
         light = GetComponent<Light>();
         highestPoint = centerOfOrbit.position.y + orbitRadius;
+        light.range = orbitRadius;
     }
 
     // Update is called once per frame
