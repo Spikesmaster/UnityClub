@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 1
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 868c44dc129ad3a42adab2c067ac71b3, type: 2}
 --- !u!1 &46906109
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +332,7 @@ PrefabInstance:
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 75
+      value: 98.7
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
@@ -4511,7 +4511,7 @@ PrefabInstance:
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 75
+      value: 95.5
       objectReference: {fileID: 0}
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
@@ -5224,7 +5224,7 @@ PrefabInstance:
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 52.2
+      value: 92.19
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
@@ -5941,7 +5941,7 @@ PrefabInstance:
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.6
+      value: 90.2
       objectReference: {fileID: 0}
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
@@ -6096,17 +6096,17 @@ PrefabInstance:
     - target: {fileID: 8061974042659265819, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 609
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8061974042659265819, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8061974042659265819, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 44
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c84ec233b678c1489e26820d4565a69, type: 3}
@@ -7227,7 +7227,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1925004029
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7249,7 +7249,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925004028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -8177,7 +8177,7 @@ PrefabInstance:
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 58.492897
+      value: 90.2
       objectReference: {fileID: 0}
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
@@ -8881,7 +8881,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459664648010107158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -364.05, y: 0, z: -260.44}
+  m_LocalPosition: {x: -7, y: 0, z: 85}
   m_LocalScale: {x: 123.90539, y: 123.90539, z: 123.90539}
   m_Children:
   - {fileID: 1459664649275740583}
@@ -8917,7 +8917,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459664648015458551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.2, y: 0, z: 2.7}
+  m_LocalPosition: {x: 4.98, y: 0, z: -0.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1459664649275740583}
@@ -9477,13 +9477,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerOfOrbit: {fileID: 1459664649275740583}
-  period: 10
+  period: 5
   startingPhase: 0
-  intensityMultiplier: 0.2
+  intensityMultiplier: 0.02
   highestPoint: 0
   currentAltitude: 0
-  sunZenithColor: {r: 1, g: 0.8982797, b: 0.4481132, a: 0.23921569}
-  sunSetColor: {r: 1, g: 0.7647059, b: 0.38431373, a: 0.078431375}
+  sunZenithColor: {r: 1, g: 0.8242606, b: 0.3066038, a: 1}
+  sunSetColor: {r: 1, g: 0.7647059, b: 0.38431373, a: 1}
 --- !u!108 &2445561663861760264
 Light:
   m_ObjectHideFlags: 0
@@ -9496,13 +9496,13 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 0.5801887, a: 1}
-  m_Intensity: 0.2
-  m_Range: 20
+  m_Intensity: 1
+  m_Range: 100
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -9538,7 +9538,7 @@ Light:
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 0.2
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -14904,7 +14904,7 @@ PrefabInstance:
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 66
+      value: 92.9
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
@@ -15309,8 +15309,8 @@ GameObject:
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &7655633258325516625
 MeshCollider:
