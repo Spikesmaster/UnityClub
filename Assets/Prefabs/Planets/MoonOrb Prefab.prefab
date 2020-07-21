@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 5713652912977341089}
   - component: {fileID: 5713652912977341118}
   - component: {fileID: 5713652912977341088}
+  - component: {fileID: 6421478921184842228}
   m_Layer: 0
   m_Name: MoonRiseZone
   m_TagString: Untagged
@@ -125,6 +126,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6421478921184842228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5713652912977341116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fd3b4f0982172489bfc0011cabd294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5713652913374905274
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +150,7 @@ GameObject:
   - component: {fileID: 5713652913374905279}
   - component: {fileID: 5713652913374905276}
   - component: {fileID: 5713652913374905278}
+  - component: {fileID: 1112415771631243540}
   m_Layer: 0
   m_Name: MoonSetZone
   m_TagString: Untagged
@@ -218,6 +232,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1112415771631243540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5713652913374905274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fd3b4f0982172489bfc0011cabd294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8324406224164801242
 GameObject:
   m_ObjectHideFlags: 0
