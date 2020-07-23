@@ -2929,6 +2929,10 @@ PrefabInstance:
       propertyPath: intensityMultiplier
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1966584320, guid: 95bcdc22d304da94d84190568691ae76, type: 3}
+      propertyPath: sunSetColor.g
+      value: 0.67560244
+      objectReference: {fileID: 0}
     - target: {fileID: 2140986059, guid: 95bcdc22d304da94d84190568691ae76, type: 3}
       propertyPath: m_Color.r
       value: 1
