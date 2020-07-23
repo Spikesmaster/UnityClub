@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 1
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 868c44dc129ad3a42adab2c067ac71b3, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1001 &5471139110841050474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -194,6 +194,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5471139110682112299, guid: 0167da8466290d54f9efe5b20eb2e439,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471139110784436914, guid: 0167da8466290d54f9efe5b20eb2e439,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505612567534878868, guid: 0167da8466290d54f9efe5b20eb2e439,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505612567534878868, guid: 0167da8466290d54f9efe5b20eb2e439,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978738094971890332, guid: 0167da8466290d54f9efe5b20eb2e439,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 13.6
+      objectReference: {fileID: 0}
     - target: {fileID: 8942507171103456925, guid: 0167da8466290d54f9efe5b20eb2e439,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -212,6 +237,11 @@ PrefabInstance:
     - target: {fileID: 8942507171387453729, guid: 0167da8466290d54f9efe5b20eb2e439,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8942507171618314594, guid: 0167da8466290d54f9efe5b20eb2e439,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8942507171649520221, guid: 0167da8466290d54f9efe5b20eb2e439,
