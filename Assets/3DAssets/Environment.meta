@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/3DAssets/OutpostAssets/MainDome.meta
 guid: dc613eba63a88b74784c1a1dc8963a0d
+=======
+<<<<<<< HEAD:Assets/3DAssets/OutpostAssets/Mountain.meta
+guid: 5931dcd63dea1ff4f92087e9f75cd710
+>>>>>>> parent of d8378b5... Updated nav mesh. Sun and game time are now synchronized
 =======
 guid: 159f63d66c7fc284899d31c05b41695c
 >>>>>>> parent of d8378b5... Updated nav mesh. Sun and game time are now synchronized:Assets/3DAssets/Environment.meta
