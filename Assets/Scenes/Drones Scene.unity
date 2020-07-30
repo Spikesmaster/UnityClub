@@ -332,7 +332,7 @@ PrefabInstance:
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.386154
+      value: 25.58
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
@@ -812,6 +812,100 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &478759115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 478759116}
+  - component: {fileID: 478759119}
+  - component: {fileID: 478759118}
+  - component: {fileID: 478759117}
+  m_Layer: 0
+  m_Name: NavPlane (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 8
+  m_IsActive: 1
+--- !u!4 &478759116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478759115}
+  m_LocalRotation: {x: 0.0902248, y: 0.032827787, z: -0.16755608, w: 0.98117626}
+  m_LocalPosition: {x: -8.6997385, y: 1.3145251, z: -0.16839091}
+  m_LocalScale: {x: 0.9091185, y: 1.0103611, z: 1.0001069}
+  m_Children: []
+  m_Father: {fileID: 1131272704}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 9.942, y: 4.776, z: -3.8590002}
+--- !u!64 &478759117
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478759115}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &478759118
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478759115}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &478759119
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478759115}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &492892116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,6 +1999,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WaterCollector3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9fd2371fde5c1b44a8786d07d1c5803b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9fd2371fde5c1b44a8786d07d1c5803b,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fd2371fde5c1b44a8786d07d1c5803b, type: 3}
@@ -3351,6 +3455,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterCollector1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9fd2371fde5c1b44a8786d07d1c5803b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9fd2371fde5c1b44a8786d07d1c5803b,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fd2371fde5c1b44a8786d07d1c5803b, type: 3}
 --- !u!4 &1098978188 stripped
@@ -3397,7 +3511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1131272701
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3419,7 +3533,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131272700}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3466,13 +3580,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131272700}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -118.85, y: 360.32, z: 0}
-  m_LocalScale: {x: 24.84926, y: 13.658693, z: 13.658693}
-  m_Children: []
+  m_LocalRotation: {x: -0, y: -0, z: 0.13145046, w: 0.99132276}
+  m_LocalPosition: {x: -89.9, y: 361.1, z: 0}
+  m_LocalScale: {x: 12.408566, y: 13.658693, z: 13.658693}
+  m_Children:
+  - {fileID: 478759116}
+  - {fileID: 1387601748}
   m_Father: {fileID: 0}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15.107}
 --- !u!1 &1158293866
 GameObject:
   m_ObjectHideFlags: 0
@@ -3881,8 +3997,8 @@ GameObject:
   m_Name: Waterfall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1221432654
 Transform:
@@ -4844,6 +4960,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterCollector2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9fd2371fde5c1b44a8786d07d1c5803b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9fd2371fde5c1b44a8786d07d1c5803b,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fd2371fde5c1b44a8786d07d1c5803b, type: 3}
 --- !u!4 &1331137618 stripped
@@ -4897,7 +5023,7 @@ PrefabInstance:
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.072151
+      value: 26.33
       objectReference: {fileID: 0}
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
@@ -5535,6 +5661,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1380085416}
   m_CullTransparentMesh: 0
+--- !u!1 &1387601747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387601748}
+  - component: {fileID: 1387601751}
+  - component: {fileID: 1387601750}
+  - component: {fileID: 1387601749}
+  m_Layer: 0
+  m_Name: Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 8
+  m_IsActive: 1
+--- !u!4 &1387601748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387601747}
+  m_LocalRotation: {x: 0.674314, y: -0.038396683, z: -0.04192362, w: 0.7362532}
+  m_LocalPosition: {x: -4.97, y: 0.6, z: 3.35}
+  m_LocalScale: {x: 11.314736, y: 4.083853, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1131272704}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 98.22601, y: 127.781, z: 127.493996}
+--- !u!64 &1387601749
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387601747}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1387601750
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387601747}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1387601751
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387601747}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1392630711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5590,17 +5810,17 @@ PrefabInstance:
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.517
+      value: -10.79
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.386154
+      value: 24.71
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -72.917
+      value: -73.87
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
@@ -6343,7 +6563,7 @@ PrefabInstance:
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.770153
+      value: 25.92
       objectReference: {fileID: 0}
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
@@ -8531,7 +8751,7 @@ PrefabInstance:
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.386154
+      value: 27.4
       objectReference: {fileID: 0}
     - target: {fileID: 3896349405370736498, guid: 4c84ec233b678c1489e26820d4565a69,
         type: 3}
@@ -8763,8 +8983,8 @@ GameObject:
   m_Name: WaterStorageLeaf_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &543450653330010508
 Transform:
@@ -8797,8 +9017,8 @@ GameObject:
   m_Name: Mountain Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1157694410958551359
 GameObject:
@@ -8815,8 +9035,8 @@ GameObject:
   m_Name: WaterStorageLeaf_010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &1550879248839439999
 MeshRenderer:
@@ -8886,8 +9106,8 @@ GameObject:
   m_Name: WaterStorageLeaf_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &1807591164606959592 stripped
 GameObject:
@@ -9090,8 +9310,8 @@ GameObject:
   m_Name: Bottom Tier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &2628311423612504904
 MonoBehaviour:
@@ -9656,7 +9876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.2, y: -41.8}
+  m_AnchoredPosition: {x: 57.19995, y: -41.8}
   m_SizeDelta: {x: 253, y: 65.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4032778767064215467
@@ -9810,7 +10030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.2, y: -96.3}
+  m_AnchoredPosition: {x: 57.19995, y: -96.3}
   m_SizeDelta: {x: 253, y: 65.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4032778767168657463
@@ -9994,8 +10214,8 @@ GameObject:
   m_Name: Mines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &4032778767219877680
 GameObject:
@@ -10343,8 +10563,8 @@ GameObject:
   m_Name: Rainforest
   m_TagString: Rainforest
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &4032778767396928824
 MonoBehaviour:
@@ -10494,8 +10714,8 @@ GameObject:
   m_Name: MainDome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &4032778767416987704
 MonoBehaviour:
@@ -11149,7 +11369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.2, y: -96.3}
+  m_AnchoredPosition: {x: 57.19995, y: -96.3}
   m_SizeDelta: {x: 253, y: 65.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4032778768084295639
@@ -11259,8 +11479,8 @@ GameObject:
   m_Name: Mines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 0
 --- !u!222 &4032778768202637556
 CanvasRenderer:
@@ -11791,8 +12011,8 @@ GameObject:
   m_Name: Mines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 0
 --- !u!33 &4032778768365626910
 MeshFilter:
@@ -12032,8 +12252,8 @@ GameObject:
   m_Name: Mines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 0
 --- !u!33 &4032778768455839738
 MeshFilter:
@@ -12378,8 +12598,8 @@ GameObject:
   m_Name: Mountains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &4032778768614073354
 MonoBehaviour:
@@ -12606,8 +12826,8 @@ GameObject:
   m_Name: Volcanic
   m_TagString: Volcanic
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &4032778768671792299
 MonoBehaviour:
@@ -12835,7 +13055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.2, y: -41.8}
+  m_AnchoredPosition: {x: 57.19995, y: -41.8}
   m_SizeDelta: {x: 253, y: 65.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4032778768700429398
@@ -12983,7 +13203,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.2, y: -96.3}
+  m_AnchoredPosition: {x: 57.19995, y: -96.3}
   m_SizeDelta: {x: 253, y: 65.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!33 &4032778768820206722
@@ -13076,8 +13296,8 @@ GameObject:
   m_Name: Mines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 0
 --- !u!4 &4032778768844467364
 Transform:
@@ -13109,8 +13329,8 @@ GameObject:
   m_Name: Mines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &4032778768844467417
 MeshFilter:
@@ -13350,7 +13570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.2, y: -41.8}
+  m_AnchoredPosition: {x: 57.19995, y: -41.8}
   m_SizeDelta: {x: 253, y: 65.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4032778768896289963
@@ -13388,7 +13608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.2, y: -41.8}
+  m_AnchoredPosition: {x: 57.19995, y: -41.8}
   m_SizeDelta: {x: 253, y: 65.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4032778768901512897
@@ -13488,8 +13708,8 @@ GameObject:
   m_Name: Mines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 0
 --- !u!33 &4032778768911765365
 MeshFilter:
@@ -13619,7 +13839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.2, y: -96.3}
+  m_AnchoredPosition: {x: 57.19995, y: -96.3}
   m_SizeDelta: {x: 253, y: 65.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4032778768943883095
@@ -13690,8 +13910,8 @@ GameObject:
   m_Name: WaterStorageLeaf_08
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &4209701249722197680
 MeshFilter:
@@ -13863,8 +14083,8 @@ GameObject:
   m_Name: WaterStorageLeaf_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &5467432576654178643
 MeshFilter:
@@ -13924,17 +14144,17 @@ PrefabInstance:
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.71328
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.386154
+      value: 22.68
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -77.684
+      value: -75.42
       objectReference: {fileID: 0}
     - target: {fileID: 5350322466224795427, guid: 030aac33ec4f4fc429d9ab3d57cc8587,
         type: 3}
@@ -14108,8 +14328,8 @@ GameObject:
   m_Name: Top Tier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &6090561487080998982
 MonoBehaviour:
@@ -14192,8 +14412,8 @@ GameObject:
   m_Name: WaterStorageLeaf_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &6788498562339141305
 GameObject:
@@ -14211,8 +14431,8 @@ GameObject:
   m_Name: Mid Tier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &6788498562339141306
 MonoBehaviour:
@@ -14243,8 +14463,8 @@ GameObject:
   m_Name: WaterStorageLeaf_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &7413475158724807118
 MeshFilter:
@@ -14269,8 +14489,8 @@ GameObject:
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!23 &7783574462880681369
 MeshRenderer:
@@ -14362,8 +14582,8 @@ GameObject:
   m_Name: WaterStorageLeaf_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8362745781568495638
 Transform:
@@ -14402,8 +14622,8 @@ GameObject:
   m_Name: WaterStorageLeaf_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &8576036542364101708
 GameObject:
@@ -14420,8 +14640,8 @@ GameObject:
   m_Name: Volcanic Outpost Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8615737396452686864
 Transform:
@@ -14546,8 +14766,8 @@ GameObject:
   m_Name: WaterStorageLeaf_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &8957628188319676150
 Transform:

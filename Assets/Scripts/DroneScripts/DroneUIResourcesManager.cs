@@ -17,6 +17,7 @@ public class DroneUIResourcesManager : MonoBehaviour
    
     public void NewDestinationSelected(GameObject outpostDestination) // When player clicks the outpost to where they want to move:
     {
+        Debug.Log(outpostDestination.name+" selected");
         currentDroneSelected.GetComponent<DroneManager>().SelectDroneDestination(outpostDestination); // Activates the destination of the drone.
     }
     public void SetNewCurrentDrone(GameObject newDrone) // When player clicks a drone:
