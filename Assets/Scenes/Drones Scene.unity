@@ -1288,6 +1288,11 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 8107394550051005654, guid: 018977052c30e244f873af9ce8a2b050,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8611474137066727711, guid: 018977052c30e244f873af9ce8a2b050,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1724,6 +1729,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103973653}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!224 &107856980 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6570406836573063619, guid: 018977052c30e244f873af9ce8a2b050,
+    type: 3}
+  m_PrefabInstance: {fileID: 2029028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &159028729 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5680278942262507192, guid: 018977052c30e244f873af9ce8a2b050,
@@ -2389,6 +2400,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &997540206 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1193543121912441326, guid: 018977052c30e244f873af9ce8a2b050,
+    type: 3}
+  m_PrefabInstance: {fileID: 2029028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1019572892 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8929074212533917225, guid: 018977052c30e244f873af9ce8a2b050,
@@ -2600,6 +2617,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95bcdc22d304da94d84190568691ae76, type: 3}
+--- !u!1 &1069775111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1069775112}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1069775112
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069775111}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1977320306}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1098978187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4684,6 +4736,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1551793464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1551793465}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1551793465
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551793464}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 107856980}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1583986116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4978,6 +5065,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!224 &1622862772 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5235385937449484924, guid: 018977052c30e244f873af9ce8a2b050,
+    type: 3}
+  m_PrefabInstance: {fileID: 2029028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1632376305 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3896349405370736497, guid: 4c84ec233b678c1489e26820d4565a69,
@@ -5480,6 +5573,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1742292937
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1742292938}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1742292938
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742292937}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 997540206}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1751677492 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7474824691562323059, guid: 018977052c30e244f873af9ce8a2b050,
@@ -5875,6 +6003,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960895415}
   m_CullTransparentMesh: 0
+--- !u!224 &1977320306 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6362148750054174504, guid: 018977052c30e244f873af9ce8a2b050,
+    type: 3}
+  m_PrefabInstance: {fileID: 2029028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1980709723 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3520441907149636281, guid: 018977052c30e244f873af9ce8a2b050,
@@ -5923,6 +6057,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7ccc60784b131419b2bd30fd695b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2074357636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074357637}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2074357637
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074357636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1622862772}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2090248158
 GameObject:
   m_ObjectHideFlags: 0
@@ -7155,7 +7324,7 @@ MonoBehaviour:
   minSupplies: 0
   foodNumber: {fileID: 1019572892}
   waterNumber: {fileID: 159028729}
-  warningTimer: {fileID: 0}
+  warningTimer: {fileID: 1742292937}
 --- !u!4 &4032778767416987691
 Transform:
   m_ObjectHideFlags: 0
@@ -7285,7 +7454,7 @@ MonoBehaviour:
   minSupplies: 0
   foodNumber: {fileID: 1108587572}
   waterNumber: {fileID: 1484287145}
-  warningTimer: {fileID: 0}
+  warningTimer: {fileID: 1069775111}
 --- !u!136 &4032778767416987706
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7782,7 +7951,7 @@ MonoBehaviour:
   minSupplies: 0
   foodNumber: {fileID: 1928515456}
   waterNumber: {fileID: 1644763583}
-  warningTimer: {fileID: 0}
+  warningTimer: {fileID: 2074357636}
 --- !u!4 &4032778768614073357
 Transform:
   m_ObjectHideFlags: 0
@@ -7898,7 +8067,7 @@ MonoBehaviour:
   minSupplies: 0
   foodNumber: {fileID: 2003275603}
   waterNumber: {fileID: 1790093337}
-  warningTimer: {fileID: 0}
+  warningTimer: {fileID: 1551793464}
 --- !u!114 &4032778768671792300
 MonoBehaviour:
   m_ObjectHideFlags: 0
