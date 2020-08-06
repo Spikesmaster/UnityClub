@@ -47,7 +47,7 @@ public class DroneManager : MonoBehaviour
             }
             NavMeshAgent agent = transform.GetComponent<NavMeshAgent>(); // Activates the navigation of the drone.
             agent.speed = droneSpeed; // Looks for the speed of the drone choosen and uses it.
-            agent.destination = outpostDestination.transform.position; // Moves the drone to the outpost that was clicked.
+            agent.destination = outpostDestination.GetComponent<OutpostDroneDestination>().GetDroneDestination().transform.position; // Moves the drone to the outpost that was clicked.
             agent.stoppingDistance = destinationDistanceOffset; // ??? This is when the drone should stop, but also no idea how this is really working ???
             GetComponent<AudioSource>().Play();
             isInTransit = true; // Turns the variable that checks if the drone is moving true (so player can't touch drone while this is flying).
