@@ -26,7 +26,7 @@ public class DroneManager : MonoBehaviour
     public void NewDroneSelected () // Method to choose the Drone clicked. This Method is called by the Event Trigger that is in every drone.
     // When the player touched the drone, the event trigger calls this line of code.
     {
-        if (!destinationWanted && !isInTransit) // This code only works if drone is not moving and player never clicked a drone.
+        if (!destinationWanted && !isInTransit && !droneMovementManagerGO.GetComponent<DroneUIResourcesManager>().destinationWanted) // This code only works if drone is not moving and player never clicked a drone.
         {
             choosePayloadUI.SetActive(true); // When a drone is clicked: changes the choosePayloadUI to visible.
             regionNameUI.text = "Region: " + currentOutpost.transform.name; // Changes the name of the region to the region where the Drone is, when player clicks it.

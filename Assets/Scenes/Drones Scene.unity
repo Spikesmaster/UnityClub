@@ -9053,8 +9053,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSupply: 80
   foodSupply: 80
-  waterConsumption: 5
-  foodConsumption: 5
+  waterConsumption: 0
+  foodConsumption: 0
   waterGeneration: 0
   foodGeneration: 0
   minEventTime: 0
@@ -9196,10 +9196,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5cf832a1c1fc24c8131deff3687b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterSupply: 5
-  foodSupply: 5
-  waterConsumption: 5
-  foodConsumption: 5
+  waterSupply: 80
+  foodSupply: 80
+  waterConsumption: 0
+  foodConsumption: 0
   waterGeneration: 0
   foodGeneration: 0
   minEventTime: 0
@@ -9709,8 +9709,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSupply: 80
   foodSupply: 80
-  waterConsumption: 5
-  foodConsumption: 5
+  waterConsumption: 0
+  foodConsumption: 0
   waterGeneration: 0
   foodGeneration: 0
   minEventTime: 0
@@ -9840,8 +9840,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterSupply: 80
   foodSupply: 80
-  waterConsumption: 1
-  foodConsumption: 1
+  waterConsumption: 0
+  foodConsumption: 0
   waterGeneration: 0
   foodGeneration: 0
   minEventTime: 0

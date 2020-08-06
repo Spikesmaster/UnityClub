@@ -17,12 +17,16 @@ public class DroneUIResourcesManager : MonoBehaviour
    
     public void NewDestinationSelected(GameObject outpostDestination) // When player clicks the outpost to where they want to move:
     {
-        Debug.Log(outpostDestination.name+" selected");
-        currentDroneSelected.GetComponent<DroneManager>().SelectDroneDestination(outpostDestination); // Activates the destination of the drone.
+        if(destinationWanted){
+            Debug.Log(outpostDestination.name+" selected");
+            currentDroneSelected.GetComponent<DroneManager>().SelectDroneDestination(outpostDestination); // Activates the destination of the drone.
+            destinationWanted = false;
+        }
     }
     public void SetNewCurrentDrone(GameObject newDrone) // When player clicks a drone:
     {
-        currentDroneSelected = newDrone; // Sets that to the current Drone.
+        if(!destinationWanted)
+            currentDroneSelected = newDrone; // Sets that to the current Drone.
     }
     public void WaterChosen() // If water button on the PayloadUI is pressed:
     {
@@ -45,6 +49,7 @@ public class DroneUIResourcesManager : MonoBehaviour
         choosePayloadUI.SetActive(false); // Turn PayloadUI invisible.
         destinationUI.SetActive(true); // Turn DestinationUI visible.
         currentDroneSelected.GetComponent<DroneManager>().destinationWanted = true; // Turn destinationWanted true, so player can click on the destination.
+        destinationWanted = true;
     }
 
 }
