@@ -408,6 +408,8 @@ GameObject:
   - component: {fileID: 7061024418240207002}
   - component: {fileID: 3896349405370736500}
   - component: {fileID: 5234062714616955525}
+  - component: {fileID: 6696242934207746763}
+  - component: {fileID: 5942021749894271338}
   m_Layer: 0
   m_Name: LargePayload_Controller
   m_TagString: LargeDrone
@@ -611,6 +613,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6696242934207746763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3896349405370736497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fc3a57d180ea5a4b960f53df4411f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseSpeed: 9
+  speedBuffMultiplier: 2
+  speedDebuffMultiplier: 0.5
+--- !u!114 &5942021749894271338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3896349405370736497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2670f61ea32b084cb4e87260c1e6820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4442335743752373398
 GameObject:
   m_ObjectHideFlags: 0

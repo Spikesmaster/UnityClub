@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
     public class DroneMoonResponse : MoonInfluencedBase
     {
     /// Public Properties
-
+    public event Action<float> ValueChangedEvent;
 
     /// Serialized Fields for Editor
 #pragma warning disable 0649
@@ -46,11 +46,13 @@ using UnityEngine.EventSystems;
         {
             case MoonTypes.blueMoon:
                 ChangeSpeed(speedBuffMultiplier);
+                ValueChangedEvent(currentSpeed);
                 BecomeInvincible();
                 break;
 
             case MoonTypes.pinkMoon:
                 ChangeSpeed(speedDebuffMultiplier);
+                ValueChangedEvent(currentSpeed);
                 break;
 
                 //since I want nothing, I can omitt this:
