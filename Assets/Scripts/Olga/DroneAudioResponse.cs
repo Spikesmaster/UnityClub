@@ -24,7 +24,7 @@ public class DroneAudioResponse : MonoBehaviour
     public void PlayRandomSong()
     {
         int index = UnityEngine.Random.Range(0, audioclips.Length);
-        audioSource.clip = audioclips[index];
-        audioSource.Play();
+        //audioSource.clip = audioclips[index];
+        audioSource.PlayOneShot(audioclips[index]);
     }
 }

@@ -39,12 +39,12 @@ public enum MoonTypes
         if (other.gameObject == moonRiseCollisionZone)
         {
             MoonRiseEvent?.Invoke(moonType);
-            Debug.Log("Moon " + moonType + " rose.");
+            //Debug.Log("Moon " + moonType + " rose.");
         }
         else if (other.gameObject == moonSetCollisionZone)
         {
             MoonSetEvent?.Invoke(moonType);
-            Debug.Log("Moon " + moonType + " set.");
+            //Debug.Log("Moon " + moonType + " set.");
         }
     }
 

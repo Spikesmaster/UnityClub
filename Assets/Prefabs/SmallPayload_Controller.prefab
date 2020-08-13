@@ -315,6 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7ccc60784b131419b2bd30fd695b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flyingSound: {fileID: 8300000, guid: 3df625310e7683747bb3e4c95fa17d0b, type: 3}
   choosePayloadUI: {fileID: 0}
   regionNameUI: {fileID: 0}
   destinationUI: {fileID: 0}
@@ -339,7 +340,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

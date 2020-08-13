@@ -410,6 +410,7 @@ GameObject:
   - component: {fileID: 5234062714616955525}
   - component: {fileID: 6696242934207746763}
   - component: {fileID: 5942021749894271338}
+  - component: {fileID: 7458878701782245937}
   m_Layer: 0
   m_Name: LargePayload_Controller
   m_TagString: LargeDrone
@@ -479,6 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7ccc60784b131419b2bd30fd695b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flyingSound: {fileID: 8300000, guid: 3df625310e7683747bb3e4c95fa17d0b, type: 3}
   choosePayloadUI: {fileID: 0}
   regionNameUI: {fileID: 0}
   destinationUI: {fileID: 0}
@@ -508,6 +510,17 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 7061024418240207002}
           m_MethodName: NewDroneSelected
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 7458878701782245937}
+          m_MethodName: PlayRandomSong
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -640,6 +653,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2670f61ea32b084cb4e87260c1e6820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7458878701782245937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3896349405370736497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ac1c2845955ae40a831f8275d4040d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioclips:
+  - {fileID: 8300000, guid: 735427131f3fdf44bae91366b0b2a1f7, type: 3}
+  - {fileID: 8300000, guid: 0de37a9423feccb4a91310b6b767bc79, type: 3}
+  - {fileID: 8300000, guid: fa48aacc8bc8a0e40aaeee2995fbdad0, type: 3}
+  - {fileID: 8300000, guid: 17da4fc2824cead469741b860ae6ed6f, type: 3}
+  - {fileID: 8300000, guid: 11224496e4d7719479333260692310ec, type: 3}
+  - {fileID: 8300000, guid: f4aa591ab7efb1a49b231767cc57a94d, type: 3}
+  - {fileID: 8300000, guid: 2cf9e0a5dc2d45440bf2e2a0b270dc95, type: 3}
+  - {fileID: 8300000, guid: 796278823fb5ee84d99a59f5e884cc33, type: 3}
+  - {fileID: 8300000, guid: a72a3e33636bfe1478de64fc4ae07c7a, type: 3}
+  - {fileID: 8300000, guid: 5bd403fa05315d94a96cf2afcd9c1d66, type: 3}
+  - {fileID: 8300000, guid: 8766fba849154b14d93cfd19a476fbf7, type: 3}
+  - {fileID: 8300000, guid: f2d1027e34dc558448537b83f4390b4b, type: 3}
+  - {fileID: 8300000, guid: 52fb757dfa6f935429abe01330eba306, type: 3}
+  - {fileID: 8300000, guid: b75276f1be2864646a79539648bd1f82, type: 3}
+  - {fileID: 8300000, guid: 80bf47bbfaf845d48932d59c48195567, type: 3}
 --- !u!1 &4442335743752373398
 GameObject:
   m_ObjectHideFlags: 0

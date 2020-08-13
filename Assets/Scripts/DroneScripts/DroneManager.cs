@@ -7,6 +7,7 @@ using TMPro;
 [RequireComponent(typeof(NavMeshAgent))]
 public class DroneManager : MonoBehaviour
 {
+    public AudioClip flyingSound;
     public GameObject choosePayloadUI; // UI where player chooses the resources.
     public TextMeshProUGUI regionNameUI; // Variable for the name of the Region to be changed on the choosePayloadUI, 
     //depending where the drone is when player touches it.
@@ -49,20 +50,32 @@ public class DroneManager : MonoBehaviour
             agent.speed = droneSpeed; // Looks for the speed of the drone choosen and uses it.
             agent.destination = outpostDestination.GetComponent<OutpostDroneDestination>().GetDroneDestination().transform.position; // Moves the drone to the outpost that was clicked.
             agent.stoppingDistance = destinationDistanceOffset; // ??? This is when the drone should stop, but also no idea how this is really working ???
+            GetComponent<AudioSource>().clip = flyingSound;
             GetComponent<AudioSource>().Play();
-            isInTransit = true; // Turns the variable that checks if the drone is moving true (so player can't touch drone while this is flying).
-            currentOutpost = outpostDestination; // Changes the current destination to destination of the outpost that was clicked.         
+            Debug.Log("play");
+            currentOutpost = outpostDestination; // Changes the current destination to destination of the outpost that was clicked.      
+            StartCoroutine(WaitForAgent());
+             
         }
     }
-    void FixedUpdate() // Checking if drone reached the destination.
+    //we wait for one second because the remaining distance value on nav mesh agent does not updet in time for the update check
+    IEnumerator WaitForAgent()
+    {
+        yield return new WaitForSeconds(1);
+        isInTransit = true; // Turns the variable that checks if the drone is moving true (so player can't touch drone while this is flying).  
+    }
+    
+    void Update() // Checking if drone reached the destination.
     {
         if(transform.GetComponent<NavMeshAgent>().remainingDistance<=destinationDistanceOffset&&isInTransit) // If the remaining distance is equal or smaller than the localization of the outposts
         // and the drone is moving, this code happens:
         {
+            Debug.Log("remainingDistance = "+(transform.GetComponent<NavMeshAgent>().remainingDistance).ToString()+" destinationDistanceOffset= "+destinationDistanceOffset.ToString());
             destinationWanted = false; // Variable that allows player to choose the destination goes to false, again.
             isInTransit = false; // Variable that allows drone to move, turns false and drone stops moving.
             CheckingResourcesDebug(); // Calls the method when drone reaches the destination.
             GetComponent<AudioSource>().Stop();
+            
             if(droneMovementManagerGO.GetComponent<DroneUIResourcesManager>().waterWasChosen == true)
             {
                 //to do the same with resource consumption
