@@ -8,5 +8,6 @@ public class OutpostDroneDestination : MonoBehaviour
 
     public GameObject GetDroneDestination(){
         return droneDestination;
+        
     }
 }
